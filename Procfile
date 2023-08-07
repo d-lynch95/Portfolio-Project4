@@ -1,1 +1,1 @@
-web: gunicorn happy-travels-appt-booking.wsgi
+web: gunicorn happytravelsbooking.wsgi
