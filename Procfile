@@ -1,0 +1,1 @@
+web: gunicorn happy-travels-appt-booking.wsgi
