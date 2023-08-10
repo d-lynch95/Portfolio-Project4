@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-dlynch95-portfolioproje-thz7tuvt4yy.ws-us102.gitpod.io', 'happy-travels-appt-booking.herokuapp.com', 'localhost', 'happy-travels-appt-booking-469f488c0638.herokuapp.com']
+ALLOWED_HOSTS = ['8000-dlynch95-portfolioproje-thz7tuvt4yy.ws-us102.gitpod.io', 'happy-travels-appt-booking.herokuapp.com', 'localhost', 'happy-travels-appt-booking-469f488c0638.herokuapp.com',]
 
 
 # Application definition
