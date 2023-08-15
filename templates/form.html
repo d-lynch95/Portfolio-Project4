@@ -1,5 +1,9 @@
 {% extends 'base.html'%}
 
+{% block title %}
+<h1> Make a booking</h1>
+{% endblock %}
+{% block content %}
 <div class="appointment-form">
     <form action="{% url 'appointment' %}" method="post">
       {% csrf_token %}
@@ -58,3 +62,4 @@
       </div>
     </form>
 </div>
+{% endblock %}
