@@ -21,6 +21,6 @@ from booking import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.homepage, name='homepage'),
     path('accounts/', include('allauth.urls')),
+    path('', include('booking.urls')),
 ]

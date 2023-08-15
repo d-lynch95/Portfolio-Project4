@@ -147,15 +147,11 @@ This game flow and logic was designed using lucidchart. This was the first time 
 ### BUGS
  - I encountered several bugs while creating this project.
 
-- I encountered a lot of difficulty when creating functions during this project. Having just come from learning JS I was having lots of issues with correct function formatting. This was fixed using tutorials from w3 schools.
+- I faced bugs when creating the views and urls files when launching the project. This was resolved using advice from tutor support.
 
-- I faced issues with timing of the text. The print statement within the functions were all executing at the same time and were creating issues. This was fixed using a time.sleep() code section.
+- I also faced issues with the urls.py files in both the project folder and the app folder. This was fixed by adding the path('', include('booking.urls')), line of code to the project urls.py file. 
 
-- I faced a lot of issues with using If Else statements and opted instead to use smaller functions such as the fin() and validation() functions as this allowed me to reuse code where possible.
 
-- I faced an issue with the heroku application freezing during run throughs. I opted to delete the application that I had previously made and redeploy it manually through heroku. 
-
-- When using colorama all of the text was changing colour as opposed to just the text I had selected. This was corrected using the autoreset option.
 
 ### User Testing
 

@@ -4,7 +4,8 @@
 <html class="h-100">
 
 <head>
-    <title>HappyTravels Appointment Bookings</title>
+
+    <title>{% block title %}HappyTravels Appointment Bookings{% endblock %}</title>
 
     <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -50,6 +51,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
                     </li>
+                    
                     {% endif %}
                 </ul>
                 <span class="navbar-text text-muted">
@@ -58,6 +60,10 @@
             </div>
         </div>
     </nav>
+    <div>
+        {% block header %}
+        {% endblock %}
+    </div>
 
     <main class="flex-shrink-0 main-bg">
         {% block content %}
