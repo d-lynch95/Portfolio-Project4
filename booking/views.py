@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse
 
 def homepage(request):
@@ -10,7 +11,7 @@ def contact(request):
 def booking(request):
     return render(request, 'form.html')
 
-def appointment(request):
+def appointment(LoginRequiredMixin, request):
     if request.method== "POST" :
         your_name = request.POST['your-name']
         your_phone = request.POST['your-phone']
