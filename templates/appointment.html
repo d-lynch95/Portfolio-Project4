@@ -1,8 +1,10 @@
 {% extends base.html %}
 
-
+{% block title %}
 <h1> Hello appointment </h1>
+{% endblock %}
 
+{% block content %}
 <h3>Review Your Information:</h3>
 
 <p> {{ your_schedule }}</p>
@@ -14,3 +16,26 @@
 <p> {{your_date}}</p>
 <p> {{your_message}}</p>
 
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row">
+        {% for booking in object_list %}
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <div class="card-body">
+                        <h4 class=""><a href="{{ booking.get_absolute_url }}"> {{ booking.title }} </a></h4>
+                        <p class="card-text"></p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="">
+                                <small class="text-muted"> 9 mins</small>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
