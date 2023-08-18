@@ -45,12 +45,8 @@ class SingleView(DetailView):
     template_name = 'booking/single.html'
     context_object_name = 'post'
 
-class ApptView(ListView):
-    model = booking
-    template_name = 'booking/posts.html'
-    context_object_name = 'post_list'
-
 class PostsView(ListView):
     model = booking
     template_name = 'booking/posts.html'
     context_object_name = 'post_list'
+
