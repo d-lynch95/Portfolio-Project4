@@ -11,7 +11,7 @@ def contact(request):
 def booking(request):
     return render(request, 'form.html')
 
-def appointment(LoginRequiredMixin, request):
+def appointment(request):
     if request.method== "POST" :
         your_name = request.POST['your-name']
         your_phone = request.POST['your-phone']
