@@ -37,16 +37,16 @@ def appointment(request):
         return render(request, 'home.html', {})
 
 class IndexView(ListView):
-    model = booking
-    template_name = 'booking/appointment.html'
+    model = Booking
+    template_name = 'appointment.html'
 
 class SingleView(DetailView):
-    model = booking
-    template_name = 'booking/single.html'
+    model = Booking
+    template_name = 'single.html'
     context_object_name = 'post'
 
 class PostsView(ListView):
-    model = booking
-    template_name = 'booking/posts.html'
+    model = Booking
+    template_name = 'posts.html'
     context_object_name = 'post_list'
 
