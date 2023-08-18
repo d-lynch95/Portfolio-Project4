@@ -5,9 +5,10 @@ from . import views
 
 urlpatterns = [
     path('', views.homepage, name='homepage'),
-    # path('appointment', views.IndexView.as_view(), name='appointment'),
+    #path('appointment', views.IndexView.as_view(), name='appointment'),
     path('contact', views.contact, name='contact'),
     path('booking', views.booking, name='booking'),
     path('appointment', views.appointment, name='appointment'),
+    path('posts/', views.PostsView.as_view(), name='posts'),
     path('<slug:slug>', views.SingleView.as_view(), name='single'),
 ]
