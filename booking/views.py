@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse
+from .models import Booking
+from django.views.generic import ListView, DetailView, UpdateView
 
 def homepage(request):
     return render(request, 'index.html')
@@ -33,3 +35,12 @@ def appointment(request):
     
     else:
         return render(request, 'home.html', {})
+
+class IndexView(ListView):
+    model = booking
+    template_name = 'booking/appointment.html'
+
+class SingleView(DetailView):
+    model = booking
+    template_name = 'booking/single.html'
+    context_object_name = 'post'
