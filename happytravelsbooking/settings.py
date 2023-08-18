@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'booking',
+    'bootstrap5',
 ]
 
 SITE_ID = 1
