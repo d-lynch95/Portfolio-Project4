@@ -13,24 +13,39 @@ def contact(request):
 def booking(request):
     return render(request, 'form.html')
 
+def posts(request):
+    return render(request, 'posts.html')
+
+def booking_list(request):
+    bookings = Booking.objects.all()
+    return render(request, 'booking.html', {'bookings': bookings})
+
 def appointment(request):
-    if request.method== "POST" :
-        your_name = request.POST['your-name']
-        your_phone = request.POST['your-phone']
-        your_email = request.POST['your-email']
-        your_address = request.POST['your-address']
-        your_schedule = request.POST['your-schedule']
-        your_date = request.POST['your-date']
-        your_message = request.POST['your-message']
+    if request.method == "POST" :
+        title = request.POST['title']
+        excerpt = request.POST['excerpt']
+        author = request.POST['author']
+        save()
+
+        # your_name = request.POST['your-name']
+        # your_phone = request.POST['your-phone']
+        # your_email = request.POST['your-email']
+        # your_address = request.POST['your-address']
+        # your_schedule = request.POST['your-schedule']
+        # your_date = request.POST['your-date']
+        # your_message = request.POST['your-message']
         
         return render(request, 'appointment.html', {
-            'your_name': your_name,
- 			'your_phone': your_phone,
- 			'your_email': your_email,
- 			'your_address': your_address,
- 			'your_schedule': your_schedule,
- 			'your_date': your_date,
- 			'your_message': your_message
+            'title': title,
+            'excerpt': excerpt,
+            'author': author
+            # 'your_name': your_name,
+ 			# 'your_phone': your_phone,
+ 			# 'your_email': your_email,
+ 			# 'your_address': your_address,
+ 			# 'your_schedule': your_schedule,
+ 			# 'your_date': your_date,
+ 			# 'your_message': your_message
  			}) 
     
     else:
@@ -49,4 +64,6 @@ class PostsView(ListView):
     model = Booking
     template_name = 'posts.html'
     context_object_name = 'post_list'
+
+
 

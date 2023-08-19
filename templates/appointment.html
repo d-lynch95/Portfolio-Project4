@@ -7,6 +7,11 @@
 {% block content %}
 <h3>Review Your Information:</h3>
 
+<p>{{ title }}</p>
+<p>{{ excerpt }}</p>
+<p>{{ author }}</p>
+
+
 <p> {{ your_schedule }}</p>
 <p> {{your_name}}</p>
 <p> {{your_phone}}</p>
@@ -19,7 +24,7 @@
 <div class="album py-5 bg-light">
     <div class="container">
         <div class="row">
-        {% for Booking in object_list %}
+        {% for booking in object_list %}
             <div class="col-md-4">
                 <div class="card mb-4 box-shadow">
                     <div class="card-body">

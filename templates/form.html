@@ -4,7 +4,19 @@
 <h1> Make a booking</h1>
 {% endblock %}
 {% block content %}
-<div class="appointment-form">
+
+
+<h1>Create Post</h1>
+<form action="{% url 'appointment' %}" method="post">
+  {% csrf_token %}
+  Title: <input type="text" name="title"> 
+  Excerpt: <input type="text" name="excerpt">"
+  Author: <input type="text" name="author">
+  <input type="submit" value="Post"/>
+</form>
+
+
+<!-- <div class="appointment-form">
     <form action="{% url 'appointment' %}" method="post">
       {% csrf_token %}
       <div class="row">
@@ -62,4 +74,4 @@
       </div>
     </form>
 </div>
-{% endblock %}
+{% endblock %} -->
