@@ -10,5 +10,4 @@ urlpatterns = [
     path('booking/', views.booking, name='booking'),
     path('appointment', views.appointment, name='appointment'),
     path('posts', views.posts, name='posts'),
-    path('<slug:slug>', views.SingleView.as_view(), name='single'),
 ]
