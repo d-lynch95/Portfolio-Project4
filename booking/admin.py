@@ -6,3 +6,10 @@ from .models import Booking
 @admin.register(Booking)
 class PostAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug':('title',),}
+    list_display = (
+                    'title',
+                    'excerpt',
+                    'author',
+                    'updated',
+                    'published'
+                    )

@@ -7,11 +7,13 @@
 
 
 <h1>Create Post</h1>
-<form action="{% url 'appointment' %}" method="post">
+<form action="" method="post">
   {% csrf_token %}
-  Title: <input type="text" name="title"> 
-  Excerpt: <input type="text" name="excerpt">"
-  Author: <input type="text" name="author">
+  Title: <input type="text" name="title"> </br>
+  Excerpt: <input type="text" name="excerpt"> </br>
+  Author: <input type="text" name="author"> </br>
+  
+
   <input type="submit" value="Post"/>
 </form>
 
