@@ -1,6 +1,5 @@
 from django.urls import path
 from . import views
-
 # This is the app directory
 
 urlpatterns = [
@@ -10,4 +9,5 @@ urlpatterns = [
     path('booking/', views.booking, name='booking'),
     path('appointment', views.appointment, name='appointment'),
     path('posts', views.posts, name='posts'),
+    path('', bookingdata.as_view(), name='bookingdata' ),
 ]

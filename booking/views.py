@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse
 from .models import Booking
-from django.views.generic import ListView, DetailView, UpdateView
+from django.views.generic import ListView, DetailView, UpdateView, CreateView
 
 def homepage(request):
     return render(request, 'index.html')
@@ -44,3 +44,6 @@ class IndexView(ListView):
     model = Booking
     template_name = 'appointment.html'
 
+class bookingdata(CreateView):
+    model = Booking
+    fields = ['title', 'excerpt', 'author', 'updated', 'published']
