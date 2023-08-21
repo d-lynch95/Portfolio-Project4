@@ -10,6 +10,5 @@ class PostAdmin(admin.ModelAdmin):
                     'title',
                     'excerpt',
                     'author',
-                    'updated',
                     'published'
                     )

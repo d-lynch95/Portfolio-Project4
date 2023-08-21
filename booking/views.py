@@ -20,30 +20,22 @@ def posts(request):
 #     bookings = Booking.objects.all()
 #     return render(request, 'booking.html', {'bookings': bookings})
 
-def appointment(request):
-    if request.method == "POST" :
-        title = request.POST['title']
-        excerpt = request.POST['excerpt']
-        author = request.POST['author']
-        updated = request.POST['updated']
-        published = request.POST['published']
-        
-        return render(request, 'appointment.html', {
-            'title': title,
-            'excerpt': excerpt,
-            'author': author,
-            'updated': updated,
-            'published': published
-            
- 			}) 
-    
-    else:
-        return render(request, 'home.html', {})
+def submit_form(request):
+    if request.method == 'POST':
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('success')
+
+    else: form = MyForm()
+
+    return render(request, index.html, {'form': form})
 
 class IndexView(ListView):
     model = Booking
-    template_name = 'appointment.html'
+    template_name = 'posts.html'
 
 class bookingdata(CreateView):
     model = Booking
-    fields = ['title', 'excerpt', 'author', 'updated', 'published']
+    fields = ['title', 'excerpt', 'author', 'published']
+    template_name = 'form.html'
