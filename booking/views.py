@@ -8,3 +8,18 @@ class PostCreateView(CreateView):
     model = Post
     fields = ['name', 'phone', 'email', 'time', 'date', 'user', 'slug']
     template_name = 'post_form.html'
+
+def homepage(request):
+    return render(request, 'index.html')
+
+def contact(request):
+    return render(request, 'contact.html')
+
+def appointment(request):
+    return render(request, 'appointment.html')
+
+def form(request):
+    return render(request, 'form.html')
+
+def posts(request):
+    return render(request, 'posts.html')
