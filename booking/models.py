@@ -6,12 +6,12 @@ from cloudinary.models import CloudinaryField
 
 class Post(models.Model):
     name = models.CharField(max_length=50)
+    slug = models.SlugField(max_length=100, unique=True)
     phone = models.CharField(max_length=20)
     email = models.EmailField()
     time = models.TimeField()
     date = models.DateField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    slug = models.SlugField()
     # need to add appointment Id and user information
 
 # This class orders the appointments in reverse order
