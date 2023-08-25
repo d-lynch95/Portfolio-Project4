@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
 <div class="container-fluid">
     <div class="row">
 
         <!-- Appointments display -->
         <div class="col-12 mt-3 left">
+            <h1>Test this code</h1>
             <div class="row">
             {% for post in post_list %}
                 <div class="col-md-4">
@@ -29,8 +29,7 @@
             {% if forloop.counter|divisibleby:4 %}
             </div>
             <div class="row"></div>
-
-
+            {% endif %}
             {% endfor %}
         </div>
 

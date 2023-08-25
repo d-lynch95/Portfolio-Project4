@@ -1,8 +1,14 @@
 from django.shortcuts import render
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse
+from django.views import generic
 from django.views.generic import ListView, DetailView, UpdateView, CreateView
 from .models import Post
+
+class PostList(generic.ListView):
+    model = Post
+    queryset = Post.objects.order_by('date')
+    template_name = 'posts.html'
 
 class PostCreateView(CreateView):
     model = Post
