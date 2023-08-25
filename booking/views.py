@@ -7,7 +7,7 @@ from .models import Post
 class PostCreateView(CreateView):
     model = Post
     fields = ['name', 'phone', 'email', 'time', 'date', 'user', 'slug']
-    template_name = 'post_form.html'
+    template_name = 'form.html'
 
 def homepage(request):
     return render(request, 'index.html')
