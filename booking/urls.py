@@ -9,5 +9,5 @@ urlpatterns = [
     path('appointment', views.appointment, name='appointment'),
     path('form', views.form, name='form'),
     path('posts', views.posts, name='posts'),
-    
+    path('PostList', views.PostList.as_view(), name="PostList"),
 ]
