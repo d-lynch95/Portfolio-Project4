@@ -1,6 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+{% for x in PostList %}
+<li>
+    {{ x.name }} 
+    {{ x.phone }}
+</li>
+{% endfor %}
 <div class="container-fluid">
     <div class="row">
 
@@ -29,6 +36,7 @@
             {% if forloop.counter|divisibleby:4 %}
             </div>
             <div class="row"></div>
+            <!-- Do I need to add pagination to this section?-->
             {% endif %}
             {% endfor %}
         </div>
