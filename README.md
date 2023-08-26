@@ -153,6 +153,12 @@ This game flow and logic was designed using lucidchart. This was the first time 
 
 - I faced issues when trying to include mixins to function based views. I fixed this by changing to class based views following the advice of a youtube tutorial.
 
+- I was having issues with the formatting of some of the database fields once they had been formatted using summertime as the html tags were still showing. I changed this using {x.name|safe}
+
+- When creating the URLS I had both functions and class based views pointing to the same URL's. This was causing issues with loading the page. Once this was corrected the issue resolved itself.
+
+- I was having issues getting the database information to print to the desired webpage. This was due to using the incorrect naming convention on the for loop. Once I corrected the name to object_loop the page loaded correctly.
+
 
 ### User Testing
 
