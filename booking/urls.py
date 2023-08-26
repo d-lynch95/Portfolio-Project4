@@ -5,9 +5,8 @@ from . import views
 
 urlpatterns = [
     path('', views.homepage, name='homepage'),
-    path('contact', views.contact , name='contact'),
-    path('appointment', views.appointment, name='appointment'),
-    path('form', views.form, name='form'),
-    path('posts', views.posts, name='posts'),
-    path('PostList', views.PostList.as_view(), name="PostList"),
+    path('contact/', views.contact , name='contact'),
+    path('appointment/', views.appointment, name='appointment'),
+    path('form/', views.form, name='form'),
+    path('posts/', views.PostList.as_view(), name="PostList"),
 ]

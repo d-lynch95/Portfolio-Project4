@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-{% for x in PostList %}
-<li>
-    {{ x.name }} 
-    {{ x.phone }}
-</li>
-{% endfor %}
+<div>
+    {% for x in object_list %}
+        <li>
+            {{ x.name }} 
+            {{ x.phone }}
+        </li>
+    {% endfor %}
+</div>
 <div class="container-fluid">
     <div class="row">
 
