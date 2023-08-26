@@ -265,7 +265,7 @@ The live link can be found here - https://escape-the-dungeon.herokuapp.com/
 
 - I used countless stack overflow entries to help me to solve minor django related bugs.
 
-- I used the following projects as inspiration for my project. [TennisBuddies](https://github.com/lucia2007/tennis_buddies),
+- I used the following projects as inspiration for my project. [TennisBuddies](https://github.com/lucia2007/tennis_buddies), 
 
 - I used the following tutorial for help with my requirements.txt file [LearnPython](https://learnpython.com/blog/python-requirements-file/)
 

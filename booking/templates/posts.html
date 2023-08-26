@@ -1,14 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div>
-    {% for x in object_list %}
-        <li>
-            {{ x.name }} 
-            {{ x.phone }}
-        </li>
-    {% endfor %}
-</div>
 <div class="container-fluid">
     <div class="row">
 
@@ -24,11 +16,11 @@
                                 <h2 class="card-title"> {{ post.name }} </h2>
                                     <!-- Change this h2 to appointment number -->
                                 <p class="card-text">
-                                    {{ post.name }}
-                                    {{ post.phone }}
-                                    {{ post.email }}
-                                    {{ post.time }}
-                                    {{ post.date }}
+                                    {{ post.name }} </br>
+                                    {{ post.phone }} </br>
+                                    {{ post.email }} </br>
+                                    {{ post.time }} </br>
+                                    {{ post.date }} </br>
                                 </p>
                             </a>
                         </div>
