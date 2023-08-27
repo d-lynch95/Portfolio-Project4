@@ -7,12 +7,18 @@ Make a booking
 
 {% load crispy_forms_tags %}
 
+{% if saved %}
+<div class="alert alert-success" role="alert">
+    Your appointment has been saved succesfully
+</div>
+{% else %}
+
     <h1>Create Post</h1>
     <form method="post">
         {% csrf_token %}
         {% crispy form %}
         <button type="submit" class="btn btn-signup btn-lg">Make Appointment</button>
     </form>
-
+{% endif %}
 
 {% endblock %}

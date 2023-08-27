@@ -35,7 +35,16 @@ def makeappt(request):
     form = ApptForm()
     if request.method == 'POST':
         form = ApptForm(request.Post)
-        if form.is_valid():
-            pass
+        # Do I need to remove this indentation?
+
+    if form.is_valid():
+        form.instance.email = request.user.email
+        form.instance.name = request.user.username
+        form.save()
+    else:
+        form = ApptForm()
+
     context = {'form': form}
+        # Do I add the indiviual parameters for the form here?
+
     return render(request, 'form.html', context)
