@@ -34,17 +34,21 @@ def posts(request):
 def makeappt(request):
     form = ApptForm()
     if request.method == 'POST':
-        form = ApptForm(request.Post)
+        form = ApptForm(request.POST)
         # Do I need to remove this indentation?
-
     if form.is_valid():
-        form.instance.email = request.user.email
-        form.instance.name = request.user.username
-        form.save()
+        appt = ApptForm()
+        appt.email = request.user.email
+        appt.name = request.user.username
+        appt.date = form.cleaned_data['date']
+        appt.time = form.cleaned_data['time']
+        appt.user = request.user
+        appt.slug = 'newslug'
+        appt.save()
     else:
         form = ApptForm()
 
-    context = {'form': form}
+    context = {"form": form}
         # Do I add the indiviual parameters for the form here?
 
     return render(request, 'form.html', context)
