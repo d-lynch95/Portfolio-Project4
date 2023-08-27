@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from django.views import generic
 from django.views.generic import ListView, DetailView, UpdateView, CreateView
 from .models import Post
+from .forms import ApptForm
 
 class PostList(generic.ListView):
     model = Post
@@ -29,3 +30,12 @@ def form(request):
 
 def posts(request):
     return render(request, 'posts.html')
+
+def makeappt(request):
+    form = ApptForm()
+    if request.method == 'POST'
+        form = ApptForm(request.Post)
+        if form.is_valid():
+            pass
+    context = {'form': form}
+    return render(request, 'form.html', context)
