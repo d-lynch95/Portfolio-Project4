@@ -33,7 +33,7 @@ def posts(request):
 
 def makeappt(request):
     form = ApptForm()
-    if request.method == 'POST'
+    if request.method == 'POST':
         form = ApptForm(request.Post)
         if form.is_valid():
             pass

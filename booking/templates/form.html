@@ -5,7 +5,14 @@ Make a booking
 {% endblock %}
 {% block content %}
 
+{% load crispy_forms_tags %}
 
-<h1>Create Post</h1>
+    <h1>Create Post</h1>
+    <form method="post">
+        {% csrf_token %}
+        {% crispy form %}
+        <button type="submit" class="btn btn-signup btn-lg">Make Appointment</button>
+    </form>
+
 
 {% endblock %}
