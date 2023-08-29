@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse
 from django.views import generic
@@ -11,11 +11,6 @@ class PostList(generic.ListView):
     queryset = Post.objects.order_by('date')
     template_name = 'posts.html'
 
-class PostCreateView(CreateView):
-    model = Post
-    fields = ['name', 'phone', 'email', 'time', 'date', 'user', 'slug']
-    template_name = 'form.html'
-
 def homepage(request):
     return render(request, 'index.html')
 
@@ -25,30 +20,29 @@ def contact(request):
 def appointment(request):
     return render(request, 'appointment.html')
 
-def form(request):
-    return render(request, 'form.html')
-
 def posts(request):
     return render(request, 'posts.html')
 
-def makeappt(request):
-    form = ApptForm()
-    if request.method == 'POST':
-        form = ApptForm(request.POST)
-        # Do I need to remove this indentation?
-    if form.is_valid():
-        appt = ApptForm()
-        appt.email = request.user.email
-        appt.name = request.user.username
-        appt.date = form.cleaned_data['date']
-        appt.time = form.cleaned_data['time']
-        appt.user = request.user
-        appt.slug = 'newslug'
-        appt.save()
-    else:
+class MakeApptView(generic.CreateView):
+    def get(self, request):
         form = ApptForm()
-
-    context = {"form": form}
-        # Do I add the indiviual parameters for the form here?
-
-    return render(request, 'form.html', context)
+        context = {"form": form}
+        return render(request, 'form.html', context)
+    
+    def post(self, request):
+        form = ApptForm(request.POST)
+        if form.is_valid():
+            # appt = ApptForm()
+            # appt.email = request.user.email
+            # appt.name = request.user.username
+            # appt.date = form.cleaned_data['date']
+            # appt.time = form.cleaned_data['time']
+            # appt.user = request.user
+            # appt.slug = 'newslug'
+            # appt.save()
+            form.save()
+            context = {"form": form}
+            return render(request, 'form.html', context)
+        else:
+            context = {"form": form}
+            return render(request, 'form.html', context)
