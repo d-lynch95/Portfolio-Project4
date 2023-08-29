@@ -41,8 +41,7 @@ class MakeApptView(generic.CreateView):
             # appt.slug = 'newslug'
             # appt.save()
             form.save()
-            context = {"form": form}
-            return render(request, 'form.html', context)
+            return redirect("/posts/")
         else:
             context = {"form": form}
             return render(request, 'form.html', context)
