@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 class Post(models.Model):
-    post_id = models.AutoField(primary_key=True)
+    # post_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50)
     slug = models.SlugField(max_length=100, unique=True)
     phone = models.CharField(max_length=20)
