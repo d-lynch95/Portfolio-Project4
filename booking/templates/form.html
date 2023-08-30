@@ -14,11 +14,18 @@ Make a booking
 {% else %}
 
     <h1>Create Post</h1>
-    <form method="post">
-        {% csrf_token %}
-        {% crispy form %}
-        <input type="submit" class="btn btn-signup btn-lg">Make Appointment</input>
-    </form>
+
+    {% if user.is_authenticated %}
+        <form method="post">
+            {% csrf_token %}
+            {% crispy form %}
+            <input type="submit" class="btn btn-signup btn-lg">Make Appointment</input>
+        </form>
+    
+    {% else %}
+        <h2>Please <a href="{% url 'account_login' %}">log in</a> to create an appointment </h2>
+    {% endif %}
+        
 {% endif %}
 
 {% endblock %}
