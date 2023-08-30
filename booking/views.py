@@ -46,8 +46,8 @@ class MakeApptView(generic.CreateView):
             context = {"form": form}
             return render(request, 'form.html', context)
 
-def edit_form(request):
-    scheduled = get_object_or_404(Post)
+def edit_form(request, post_id):
+    scheduled = get_object_or_404(Post, post_id=post_id)
     form = ApptForm(instance=scheduled)
     context = {"form": form}
     return render (request, 'editform.html', context)
