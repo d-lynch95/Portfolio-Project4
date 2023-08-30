@@ -47,17 +47,19 @@ class MakeApptView(generic.CreateView):
             return render(request, 'form.html', context)
 
 class edit_form(generic.UpdateView):
-    def get(self, request):
-        scheduled = get_object_or_404(Post)
-        form = ApptForm(instance=scheduled)
-        context = {"form": form}
-        return render (request, 'editform.html', context)
+        def edit(request):
+            return render(request, 'editform.html')
+#     def get(self, request):
+#         scheduled = get_object_or_404(Post)
+#         form = ApptForm(instance=scheduled)
+#         context = {"form": form}
+#         return render (request, 'editform.html', context)
 
-    def post(self, request):
-        form = ApptForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect("/posts/")
-        else:
-            context = {"form": form}
-            return render(request, 'form.html', context)
+#     def post(self, request):
+#         form = ApptForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return redirect("/posts/")
+#         else:
+#             context = {"form": form}
+#             return render(request, 'form.html', context)
