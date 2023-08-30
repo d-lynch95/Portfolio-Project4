@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse
 from django.views import generic
@@ -33,8 +33,8 @@ class MakeApptView(generic.CreateView):
         form = ApptForm(request.POST)
         if form.is_valid():
             # appt = ApptForm()
-            # appt.email = request.user.email
-            # appt.name = request.user.username
+            # appt.instance.email = request.user.email
+            # appt.instance.name = request.user.username
             # appt.date = form.cleaned_data['date']
             # appt.time = form.cleaned_data['time']
             # appt.user = request.user
@@ -45,3 +45,9 @@ class MakeApptView(generic.CreateView):
         else:
             context = {"form": form}
             return render(request, 'form.html', context)
+
+def edit_form(request):
+    scheduled = get_object_or_404(Post)
+    form = ApptForm(instance=scheduled)
+    context = {"form": form}
+    return render (request, 'editform.html', context)

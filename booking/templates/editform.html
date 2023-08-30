@@ -1,0 +1,31 @@
+{% extends 'base.html'%}
+
+{% block title %}
+Make a booking
+{% endblock %}
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+{% if saved %}
+<div class="alert alert-success" role="alert">
+    Your appointment has been saved succesfully
+</div>
+{% else %}
+
+    <h1>Change your appointment</h1>
+
+    {% if user.is_authenticated %}
+        <form method="post">
+            {% csrf_token %}
+            {% crispy form %}
+            <input type="submit" class="btn btn-signup btn-lg">Update Appointment</input>
+        </form>
+    
+    {% else %}
+        <h2>Please <a href="{% url 'account_login' %}">log in</a> to create an appointment </h2>
+    {% endif %}
+        
+{% endif %}
+
+{% endblock %}

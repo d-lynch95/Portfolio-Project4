@@ -9,4 +9,5 @@ urlpatterns = [
     path('appointment/', views.appointment, name='appointment'),
     path('form/', views.MakeApptView.as_view(), name='form'),
     path('posts/', views.PostList.as_view(), name="PostList"),
+    path('edit/', views.edit_form, name='edit'),
 ]
