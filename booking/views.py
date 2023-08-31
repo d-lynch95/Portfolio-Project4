@@ -47,17 +47,6 @@ class MakeApptView(LoginRequiredMixin, generic.CreateView):
             context = {"form": form}
             return render(request, 'form.html', context)
 
-class edit_form(generic.UpdateView):
-        def edit(request, booking_id):
-            booking = get_object_or_404(Post, id=booking_id)
-            if request.method == 'POST':
-                form = ApptForm(instance=booking)
-                if form.is_valid():
-                    form.save()
-                    return redirect('posts/')
-            form = ApptForm(instance=booking)
-            context = {"form": form}
-            return render (request, 'editform.html', context)
 
 
             
