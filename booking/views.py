@@ -63,9 +63,12 @@ class EditApptView(LoginRequiredMixin, generic.UpdateView):
     form_class = ApptForm
     template_name = 'editform.html'
     success_url = '/posts/'
+    pk_url_kwarg = 'pk'
 
-    def get_object(self, queryset=None):
-        # Get the object to be edited based on the slug parameter in the URL
-        return self.model.objects.get(slug=self.kwargs['slug'])
+    def get_object(self, queryset='last'):
+        return self.model.objects.get(pk=self.kwargs['pk'])
 
-            
+
+class DeleteAppt(LoginRequiredMixin, DeleteView):
+    model = Post
+    success_url = "/posts/"
