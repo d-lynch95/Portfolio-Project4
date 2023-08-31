@@ -29,6 +29,17 @@ class MakeApptView(LoginRequiredMixin, generic.CreateView):
         form = ApptForm()
         context = {"form": form}
         return render(request, 'form.html', context)
+
+    def get_initial(self):
+        initial = super().get_initial()
+        initial['name'] = self.request.name
+        initial['phone'] = ''
+        initial['email'] = self.request.email
+        initial['time'] = ''
+        initial['date'] = ''
+        initial['user'] = self.request.user
+        return initial
+        # Why does this not work to autofill the form?
     
     def post(self, request):
         form = ApptForm(request.POST)
@@ -50,7 +61,7 @@ class MakeApptView(LoginRequiredMixin, generic.CreateView):
 class EditApptView(LoginRequiredMixin, generic.UpdateView):
     model = Post
     form_class = ApptForm
-    template_name = 'form.html'
+    template_name = 'editform.html'
     success_url = '/posts/'
 
     def get_object(self, queryset=None):
