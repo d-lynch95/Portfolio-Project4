@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
+from django.utils.text import slugify
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
@@ -13,6 +14,11 @@ class Post(models.Model):
     date = models.DateField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     # need to add appointment Id and user information
+
+    def save(self, *args, **kwargs):
+            if not self.slug:
+                self.slug = slugify(self.name)
+            super().save(*args, **kwargs)
 
 # This class orders the appointments in reverse order
 class Meta:

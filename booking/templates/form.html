@@ -19,7 +19,6 @@ Make a booking
         <form method="post">
             {% csrf_token %}
             {% crispy form %}
-            <input type="submit" class="btn btn-signup btn-lg">Make Appointment</input>
         </form>
     
     {% else %}

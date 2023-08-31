@@ -9,11 +9,3 @@ class Migration(migrations.Migration):
     dependencies = [
         ('booking', '0003_alter_post_slug'),
     ]
-
-    operations = [
-        migrations.AlterField(
-            model_name='post',
-            name='id',
-            field=models.UUIDField(default=uuid.uuid4, primary_key=True, serialize=False),
-        ),
-    ]

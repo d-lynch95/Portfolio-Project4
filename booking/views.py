@@ -3,7 +3,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse
 from django.views import generic
 from django.views.generic import ListView, DetailView, UpdateView, CreateView, DeleteView
-# Do I need both of these views views imports?
+# Do I need both of these views imports?
 from .models import Post
 from .forms import ApptForm
 
@@ -47,6 +47,14 @@ class MakeApptView(LoginRequiredMixin, generic.CreateView):
             context = {"form": form}
             return render(request, 'form.html', context)
 
+class EditApptView(LoginRequiredMixin, generic.UpdateView):
+    model = Post
+    form_class = ApptForm
+    template_name = 'form.html'
+    success_url = '/posts/'
 
+    def get_object(self, queryset=None):
+        # Get the object to be edited based on the slug parameter in the URL
+        return self.model.objects.get(slug=self.kwargs['slug'])
 
             
