@@ -24,7 +24,7 @@ def appointment(request):
 def posts(request):
     return render(request, 'posts.html')
 
-class MakeApptView(generic.CreateView):
+class MakeApptView(LoginRequiredMixin, generic.CreateView):
     def get(self, request):
         form = ApptForm()
         context = {"form": form}
