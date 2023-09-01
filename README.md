@@ -180,50 +180,49 @@ V. Epic 5 - Documentation
 
 ### Existing Features
 
-- __Title Graphic__
+- __Home Page__
+  - This is the first page that the user will see when they arrive on the website. The primary goal of this page is to allow the user to understand the purpose of the website. This is achieved through eye catching imagery and concise text to explain how to use the website.
 
-  - This graphic uses ascii text to create a large graphic that shows the game title "Escape The Dungeon". This graphic adds to the user experience and adds more flair than a simple text based game.
+  - A  clear Navigation section also makes it intuitive for the user to navigate the website.
 
-![Title Graphic](assets/features/ASCII-text.webp)
+  - The footer section allows the user to view the company’s social media to understand better the company’s product offerings.
 
-- __External Libraries__
 
-  - This project used several external libraries
-  - We imported the time and os modules, we also imported colorama and pyfiglet.
+- __Contact Us Page__
+  - The contact us section allows the users to contact the company directly if they have any issues. This adds to the user experience as the user may have some questions that they need answered before they are prepared to make an appointment. This allows the user to contact the company in person or online.
+
+
+- __Make an appointment page__
+  - The main purpose of the website  is for users  to make appointments in order to better plan their trip. This is easily done through the form on the “Make an appointment page”. 
   
-  ![Libraries](assets/features/import.png)
-
-- __List__
-
-  - This program includes a list which players use as an inventory
-  - As players pick up items during their journey they are added to the inventory
-  - Players can easily cycle through their inventory using keyboard prompts
-
-![List](assets/features/list.png)
-
-- __Input__
-
-  - This game relies hevily on user input in order to progress the story.
-  - This was added to the game using input boxes at each decision point
-
-![Input](assets/features/input.png)
-
-
-- __Functions__
-
-  - This project reused a lot of sections of code. In order to save time and space functions were used heavily.
-  - The main functions used regularly were fin() which allows the user to exit the game, validate() which validates user input and reprompts them if input is not valid and inventory() which allows the user to print the list containing their inventory items.
+  - If the user is logged in then they can instantly fill out the form to create the appointment. 
   
-  ![Functions](assets/features/function.png)
+  - If the user is not logged in then they will be redirected to the log in or register account page. When the user has completed the form they are then redirected to the Manage appointments page
+
+
+- __Manage appointments__
+  - This page is only viewable if the user has logged in. 
   
+  - On this page the user can view the appointments that they have already made. Users will also have the option to edit or delete any appointments they have made. 
+  
+  - If the user wishes to edit their appointment then they will be redirected to the form where their information will be autofilled and they can edit it as they need to. If the user chooses to delete their appointment then it will be removed from the database.
+
+
+- __Navigation Menu__
+
+- The Navigation contains links for Home, contact us, Make an appointment, Manage Appointments and has allauth options.
+- The following navigation items are available on all pages:
+  Home -> index.html - Visible to all
+  Contact us -> contact.html - Visible to all
+  Make an appointment -> form.html - Visible to logged in users
+  Manage appointments ->posts.html - Visible to logged in users
+  Logout -> logout.html - Visible to logged in users
+  Login -> login.html - Visible to logged out users
+  Register -> signup.html - Visible to logged out users
 
 ### Features Left to Implement
 
-- I would like to add a typewriter effect to the game when I have more time to develop it.
-
-- I would like to add more path directions to expand on the story.
-
-- I would also like to add more options and more interactivity with the inventory items. The user currently has two keys remaining and I would like to add more options for these keys when time permits.
+  -  Add in additional features here
 
 ## Testing 
 
