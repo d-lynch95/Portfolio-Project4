@@ -6,7 +6,7 @@ from django_summernote.admin import SummernoteModelAdmin
 class PostAdmin(SummernoteModelAdmin):
 
     # change prepoplated fields slug: to (appointment number) when it is set up
-    prepopulated_fields = {'slug': ('name',)}
+    prepopulated_fields = {'slug': ('id',)}
     summernote_fields = ('name')
     # The name field is only a placeholder and does not need summernote
     list_filter = ('name','date','time')

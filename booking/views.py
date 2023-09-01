@@ -64,15 +64,6 @@ class EditApptView(LoginRequiredMixin, generic.UpdateView):
     template_name = 'editform.html'
     success_url = '/posts/'
    
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['post_pk'] = self.object.pk
-        return context
-
-    def form_valid(self, form):
-        post = Post.objects.get(pk=self.request.POST['post_pk'])
-        form.instance.post = post
-        return super().form_valid(form)
 
 class DeleteAppt(LoginRequiredMixin, DeleteView):
     model = Post
