@@ -49,19 +49,25 @@ HappyTravels appointment booking service is a web based booking application to a
 
 
 #### As a website business owner
-- As a site owner I want to excite users and peak their interest
-- As a site owner I want to allow for a good user experience
-- As a site owner I want to allow the user to easily navigate the website without issues
-- As a site owner I want to encourage users to play the game and potentially inform new users of their experience.
+  - As a site owner I want to excite users and peak their interest
+  - As a site owner I want to allow for a good user experience
+  - As a site owner I want to allow the user to easily navigate the website without issues
+  - As a site owner I want to encourage users to create an account
+  - As a site owner I want to encourage users to create appointments
+  - As a site owner I want to encourage users to create an account
+  - As a site owner I want the user to have a positive experience by allowing them to edit or delete their own appointments
 
 
 #### As a new user
-- As a new user I want to navigate the page intuitively and with ease
-- As a new user I want to understand the page purpose upon first viewing
-- As a new user I want to have the instructions explained clearly on how to use the tool
-- As a new user I want to easily input my choices
-- As a new user I want to easily follow the storyline
-- As a new user I want to enjoy the experience and return to play the game again
+  - As a new user I want to navigate the page intuitively and with ease
+  - As a new user I want to understand the page purpose upon first viewing
+  - As a new user I want to see company contact information
+  - As a new user I want to be able to contact the company directly
+  - As a new user I want to see the company’s social media presence
+  - As a new user I want to easily create an account
+  - As a new user I want to easily create an appointment
+  - As a new user I want to edit or delete an appointment 
+  - As a new user I want to enjoy the experience and return to make another appointment
 
 ## Design
 
@@ -77,11 +83,50 @@ This website has a simple single page design. This format was easiest as the tem
 
 This game flow and logic was designed using lucidchart. This was the first time using lucidchart so the chart is quite basic as it was made during the original genesis of the game. The game has since grown in size and stature and more text has been added to bulk up the options.
 
-##### Main Page
 
-![LucidChart](assets/media/chart1.webp)
-![LucidChart](assets/media/chart2.webp)
-![LucidChart](assets/media/chart3.webp)
+# Development
+
+## Agile Methodology
+
+This project was developed using the Agile methodology. All epics and user stories implementation progress was tracked through Github projects Kanban Board which can be found here.
+
+<Insert screenshot of Kanban board>
+
+
+This project had 5 main epics (Milestones)
+
+I. Epic 1. Initial Set up
+  - As a developer, I need to create the base.html page and structure so that other pages can reuse the layout
+  - As a developer, I need to create static resources so that images, css and javascript work on the website
+  - As a developer, I need to set up the project so that it is ready for implementing the core features
+  - As a developer, I need to create the footer with social media links and contact information
+  - As a developer, I need to create the navbar so that users can navigate the website from any device
+
+
+II. Epic 2.  USER REGISTRATION/AUTENTHICATION
+  - As a developer, I need to implement the Register page using the django-allauth module
+  - As a developer, I need to implement the Login page using django-allauth module
+  - As a developer, I need to implement the  Logout modal using django-allauth module
+  - As a site owner, I would like the allauth pages customized to that they fit in with the sites styling
+    
+
+III. Epic 3 - Making appointments
+  - As a user, I would like to be able to create a new appointment when I want to visit the travel agnecy
+  - As a user, I would like to view my bookings when I need to check the information
+  - As a user, I would like to be able to edit a booking so that I can make changes when needed
+  - As a user I would like to delete a booking when I no longer require it
+
+
+
+
+IV. Epic 4 - Deployment Epic  
+  - As a developer, I need to deploy the project to heroku so that it is live for users
+	
+V. Epic 5 - Documentation
+  - Complete readme documentation
+
+
+
 
 
 
