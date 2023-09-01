@@ -1,9 +1,9 @@
 # Happy Travels appointment booking service
 
-HappyTravels appointment booking service is a web based booking application to allow users to book appointments in a local travel agency. The app is designed to be easy to use, intuitive and self-explanatory for users. The application
+HappyTravels appointment booking service is a web based booking application to allow users to book appointments in a local travel agency. The users are given the possibility to make an account, create a booking, and then edit or delete their bookings. This site  was developed using Python (Django), HTML, CSS and by storing the data in a PostgreSQL database.
 
 
-[Live Website](https://escape-the-dungeon.herokuapp.com/)
+[Live Website]()
 ![AmiResponsive Mockup](assets/media/dungeonresponsive.png)
 
 ## User Goals and Stories
@@ -12,27 +12,40 @@ HappyTravels appointment booking service is a web based booking application to a
 - As a user I want to
   - easily and intuitively navigate throughout the website
   - browse the website naturally and with ease
-  - understand how to play the game using simple instructions
   - be able to view the website and read all information on all screen sizes
-  - easily input my information and play the game
-
+  - Create an account on the website
+  - Make an appointment at my preferred time and date
+  - Manage my appointments and change and delete them if needed
 
 ### Business owner goals
 - As the website business owner I want to 
-  - provide an enjoyable gameplay experience for players.
-  - have multiple gameplay options to encourage players to return.
-  - provide a bug free gameplay experience.
-  - have a logical gameplay story
+  - As the website business owner I want to
+  - Provide users information about the services provided
+  - Allow users to easily access and use the site.
+  - Allow users to create appointments.
+  - Allow users to manage their own appointments
+  - Allow users to edit and delete their appointments
+  - Collect user information
+  - Allow staff to access and edit appointments
+  - Provide contact information to users
+
 
 ### User Stories
 
 #### As a user
-  - As a user I want to visit the website to play the game
+  - As a user I want to visit the website and understand it’s purpose immeditately
   - As a user I want to easily understand how to use the website
+  - As a user I want to be able to contact the business owner
+  - As a user I want to create an account easily
   - As a user I want to input my information with ease
-  - As a user I want to play the game with ease
+  - As a user I want to create an appointment with ease
+  - As a user I want the ability to view my appointments
+  - As a user I want the ability to change my appointments
+  - As a user I want the ability to delete my appointments
+  - As a user I want the ability to create multiple appointments
   - As a user I want to have an enjoyable experience
-  - As a user I want to return to the site to play the game again
+  - As a user I want to return to the site to create another appointment
+
 
 
 #### As a website business owner
