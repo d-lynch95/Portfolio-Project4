@@ -209,6 +209,7 @@ V. Epic 5 - Documentation
 
 - The Navigation contains links for Home, contact us, Make an appointment, Manage Appointments and has allauth options.
 - The following navigation items are available on all pages:
+
   Home -> index.html - Visible to all
 
 
@@ -226,7 +227,7 @@ V. Epic 5 - Documentation
 
   Login -> login.html - Visible to logged out users
 
-  
+
   Register -> signup.html - Visible to logged out users
 
 ### Features Left to Implement
