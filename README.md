@@ -84,9 +84,9 @@ This website has a simple single page design. This format was easiest as the tem
 This game flow and logic was designed using lucidchart. This was the first time using lucidchart so the chart is quite basic as it was made during the original genesis of the game. The game has since grown in size and stature and more text has been added to bulk up the options.
 
 
-# Development
+## Development
 
-## Agile Methodology
+### Agile Methodology
 
 This project was developed using the Agile methodology. All epics and user stories implementation progress was tracked through Github projects Kanban Board which can be found here.
 
@@ -134,21 +134,46 @@ V. Epic 5 - Documentation
 - Python
   - The main language used in this project was python
 - HTML
-  - The website contains a little bit of HTML
+  - The website contains HTML
 - CSS
-  - The templates used from CI include some CSS
+  - The styling is done using CSS
 - GitHub
   - The website is hosted on GitHub
 - GitPod
   - The website was developed on GitPod
-- Git 
+- Git
   - used to commit and push code during development
 - Heroku
- - The game is hosted on heroku
+  - The website  is hosted on heroku
 - Convertio.co
-  - [This](https://convertio.co/) site was used to convert jpg and png files to webp files
-- LucidChart
- -The gameplay flow chart was designed on lucid chart
+  - This site was used to convert jpg and png files to webp files
+- LucidChart 
+  - The database diagram was designed on lucid chart
+- Favicon.io -
+ - used for generating the website favicon
+- Diffchecker 
+  - used for comparing the code
+- Font Awesome 
+  - for creating atractive UX with icons
+- Bootstrap5 
+  - for adding predifined styled elements and creating responsiveness
+- Google Fonts
+  - for typography
+- PEP8 Validator
+  - used for validating the python code
+- HTML - W3C HTML Validator
+  - used for validating the HTML
+- CSS - Jigsaw CSS Validator
+  - used for validating the CSS
+- Chrome Dev Tools
+  - for debugging the project
+- W.A.V.E
+  - for testing accessibility
+- Cloudinary 
+  - for storing static data
+- LightHouse 
+  - for testing performance
+
 
 
 ## Features 
