@@ -3,7 +3,10 @@
 HappyTravels appointment booking service is a web based booking application to allow users to book appointments in a local travel agency. The users are given the possibility to make an account, create a booking, and then edit or delete their bookings. This site  was developed using Python (Django), HTML, CSS and by storing the data in a PostgreSQL database.
 
 
+<!-- Add live link -->
 [Live Website]()
+
+<!-- Add responsive mockup -->
 ![AmiResponsive Mockup](assets/media/dungeonresponsive.png)
 
 ## User Goals and Stories
@@ -72,12 +75,10 @@ HappyTravels appointment booking service is a web based booking application to a
 ## Design
 
 ### Font
-The design of this website is a very simple style as the format template was provided by the code institute. This program predominantly focuses on the Python programming language so does not incorporate CSS or styling features. The code uses minimal colour as an homage to the original text-based adventure games. The only colour in the game is red text showing "Game Over" when the player loses the game. The game also uses ASCII text showing "Escape the dungeon" when the player starts the game
+<!-- Add font section-->
 
 ### Structure
-
-This website has a simple single page design. This format was easiest as the template was provided by the Code institute.
-
+<!-- Add structure section. Justify as to why certain structure has been used -->
 
 ### Design flow chart
 
@@ -90,7 +91,7 @@ This game flow and logic was designed using lucidchart. This was the first time 
 
 This project was developed using the Agile methodology. All epics and user stories implementation progress was tracked through Github projects Kanban Board which can be found here.
 
-<Insert screenshot of Kanban board>
+<!-- Insert screenshot of Kanban board-->
 
 
 This project had 5 main epics (Milestones)
@@ -124,10 +125,6 @@ IV. Epic 4 - Deployment Epic
 	
 V. Epic 5 - Documentation
   - Complete readme documentation
-
-
-
-
 
 
 ## Technologies used
@@ -213,11 +210,23 @@ V. Epic 5 - Documentation
 - The Navigation contains links for Home, contact us, Make an appointment, Manage Appointments and has allauth options.
 - The following navigation items are available on all pages:
   Home -> index.html - Visible to all
+
+
   Contact us -> contact.html - Visible to all
+
+
   Make an appointment -> form.html - Visible to logged in users
+
+
   Manage appointments ->posts.html - Visible to logged in users
+
+
   Logout -> logout.html - Visible to logged in users
+
+
   Login -> login.html - Visible to logged out users
+
+  
   Register -> signup.html - Visible to logged out users
 
 ### Features Left to Implement
@@ -277,6 +286,7 @@ I ran through all of the functions and tested each option to record whether ther
   - Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
 The live link can be found here - 
+<!-- Add live link -->
 
 - Clone the Repository Code Locally
   - Navigate to the GitHub Repository you want to clone to use locally:
