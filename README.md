@@ -149,7 +149,7 @@ V. Epic 5 - Documentation
   - This site was used to convert jpg and png files to webp files
 - LucidChart 
   - The database diagram was designed on lucid chart
-- Favicon.io -
+- Favicon.io
  - used for generating the website favicon
 - Diffchecker 
   - used for comparing the code
@@ -277,7 +277,7 @@ I ran through all of the functions and tested each option to record whether ther
   - From the source section drop-down menu, select the Main Branch
   - Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-The live link can be found here - https://escape-the-dungeon.herokuapp.com/
+The live link can be found here - 
 
 - Clone the Repository Code Locally
   - Navigate to the GitHub Repository you want to clone to use locally:
@@ -288,6 +288,13 @@ The live link can be found here - https://escape-the-dungeon.herokuapp.com/
   - Open your IDE of choice (git must be installed for the next steps)
   - Type git clone copied-git-url into the IDE terminal
   - The project will now of been cloned on your local machine for use.
+
+- Fork the repository
+  - For creating a copy of the repository on your account and change it without affecting the original project, useFork   directly from GitHub:
+
+  - On My Repository Page, press Fork in the top right of the page
+  - A forked version of my project will appear in your repository
+
 
 - Heroku 
   - The project was deployed using Code Institutes mock terminal for Heroku
