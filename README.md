@@ -150,7 +150,7 @@ V. Epic 5 - Documentation
 - LucidChart 
   - The database diagram was designed on lucid chart
 - Favicon.io
- - used for generating the website favicon
+  - used for generating the website favicon
 - Diffchecker 
   - used for comparing the code
 - Font Awesome 
