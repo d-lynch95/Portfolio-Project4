@@ -73,4 +73,5 @@ class EditApptView(LoginRequiredMixin, generic.UpdateView):
 
 class DeleteAppt(LoginRequiredMixin, DeleteView):
     model = Post
+    template_name = 'post_confirm_delete.html'
     success_url = "/posts/"
