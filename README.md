@@ -251,6 +251,8 @@ V. Epic 5 - Documentation
 
 - I was having issues getting the database information to print to the desired webpage. This was due to using the incorrect naming convention on the for loop. Once I corrected the name to object_loop the page loaded correctly.
 
+- I struggled with making the EditApptView work as planned. I spent a lot of time changing the views.py file, the urls.py file and even tried to adjust the model. Using the help of [this](https://forum.djangoproject.com/t/why-do-i-keep-getting-this-error-all-the-time-noreversematch-at/12520/2) forum I finally realised that the issue was with my link and that it didn't include a slug reference.
+
 
 ### User Testing
 
