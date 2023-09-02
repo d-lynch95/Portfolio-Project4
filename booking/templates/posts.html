@@ -24,7 +24,7 @@
                                     {{ post.date }} </br>
                                 </p>
                             </a>
-                            <a href="{% url 'edit' %}">
+                            <a href="{% url 'edit' slug=post.slug %}">
                                 <button>Change Appointment</button>
                             </a>
                             <a href="/delete/">
