@@ -27,7 +27,7 @@
                             <a href="{% url 'edit' slug=post.slug %}">
                                 <button>Change Appointment</button>
                             </a>
-                            <a href="/delete/">
+                            <a href="{% url 'delete' slug=post.slug %}">
                                 <button>Delete Appointment</button>
                             </a>
                         </div>

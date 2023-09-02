@@ -10,5 +10,5 @@ urlpatterns = [
     path('form/', views.MakeApptView.as_view(), name='form'),
     path('posts/', views.PostList.as_view(), name="PostList"),
     path('edit/<slug:slug>', views.EditApptView.as_view(), name='edit'),
-    path('delete/', views.DeleteAppt.as_view(), name='delete'),
+    path('delete/<slug:slug>', views.DeleteAppt.as_view(), name='delete'),
  ]
