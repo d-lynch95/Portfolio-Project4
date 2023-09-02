@@ -17,7 +17,7 @@ class Post(models.Model):
 
     def save(self, *args, **kwargs):
             if not self.slug:
-                self.slug = slugify(self.id)
+                self.slug = slugify(self.name)
             super().save(*args, **kwargs)
 
 # This class orders the appointments in reverse order

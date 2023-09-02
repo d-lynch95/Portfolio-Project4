@@ -9,6 +9,6 @@ urlpatterns = [
     path('appointment/', views.appointment, name='appointment'),
     path('form/', views.MakeApptView.as_view(), name='form'),
     path('posts/', views.PostList.as_view(), name="PostList"),
-    path('<slug:slug>/', views.EditApptView.as_view(), name='edit'),
+    path('<slug:slug>/edit/', views.EditApptView.as_view(), name='edit'),
     path('delete/', views.DeleteAppt.as_view(), name='delete'),
  ]
