@@ -4,6 +4,7 @@ from django.utils import timezone
 from django.utils.text import slugify
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+import uuid
 
 class Post(models.Model):
     name = models.CharField(max_length=50)
@@ -17,7 +18,7 @@ class Post(models.Model):
 
     def save(self, *args, **kwargs):
             if not self.slug:
-                self.slug = slugify(self.name + str(self.id))
+                self.slug = slugify(self.name + " - " + str(uuid.uuid4().hex))
             super().save(*args, **kwargs)
 
 # This class orders the appointments in reverse order
