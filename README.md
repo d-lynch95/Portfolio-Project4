@@ -257,7 +257,8 @@ V. Epic 5 - Documentation
 
 - I was having an issue as the slug was showing  on the form and accepting user input instead of autopopulating. I fixed this using a hiddenwidget which i found from the [DjangoProjects](https://docs.djangoproject.com/en/4.2/ref/forms/widgets/) website.
 
-- I was having an issue with the user input field on the forms. This field was providing a drop down menu with all of the different registered users. I corrected this by using a created_by override which I found in the [DjangoProjects](https://docs.djangoproject.com/en/4.2/topics/class-based-views/generic-editing/)
+- I was having an issue with the user input field on the forms. This field was providing a drop down menu with all of the different registered users. I corrected this by removing the user input field from the form entirely. I then assigned the user in the form.is_valid section.
+
 
 
 ### User Testing
