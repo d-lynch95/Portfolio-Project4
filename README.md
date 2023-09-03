@@ -259,6 +259,8 @@ V. Epic 5 - Documentation
 
 - I was having an issue with the user input field on the forms. This field was providing a drop down menu with all of the different registered users. I corrected this by removing the user input field from the form entirely. I then assigned the user in the form.is_valid section.
 
+- I was having an issue that any logged in user could see all of the appointments that had been made. I fixed this by adding a get query set filter to the PostList view
+
 
 
 ### User Testing

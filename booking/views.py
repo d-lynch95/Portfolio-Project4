@@ -12,6 +12,10 @@ class PostList(generic.ListView):
     queryset = Post.objects.order_by('date')
     template_name = 'posts.html'
 
+    def get_queryset(self):
+        return Post.objects.filter(user=self.request.user).order_by('date')
+
+
 def homepage(request):
     return render(request, 'index.html')
 
