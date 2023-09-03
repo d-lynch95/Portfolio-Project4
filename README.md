@@ -253,7 +253,11 @@ V. Epic 5 - Documentation
 
 - I struggled with making the EditApptView work as planned. I spent a lot of time changing the views.py file, the urls.py file and even tried to adjust the model. Using the help of [this](https://forum.djangoproject.com/t/why-do-i-keep-getting-this-error-all-the-time-noreversematch-at/12520/2) forum I finally realised that the issue was with my link and that it didn't include a slug reference.
 
-- I was having issues with my slug as I was using the self(slug.name) and this was causing issues as it was not a unique id and users could not make multiple appointments.
+- I was having issues with my slug as I was using the self(slug.name) and this was causing issues as it was not a unique id and users could not make multiple appointments. I corrected this by adding a uuid to the django id and combining both the name and id fields in the slug
+
+- I was having an issue as the slug was showing  on the form and accepting user input instead of autopopulating. I fixed this using a hiddenwidget which i found from the [DjangoProjects](https://docs.djangoproject.com/en/4.2/ref/forms/widgets/) website.
+
+- I was having an issue with the user input field on the forms. This field was providing a drop down menu with all of the different registered users. I corrected this by using a created_by override which I found in the [DjangoProjects](https://docs.djangoproject.com/en/4.2/topics/class-based-views/generic-editing/)
 
 
 ### User Testing

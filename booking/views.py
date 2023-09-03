@@ -28,7 +28,14 @@ class MakeApptView(LoginRequiredMixin, generic.CreateView):
     def get(self, request):
         form = ApptForm()
         context = {"form": form}
+        hide = form.fields['slug']
+        hide.widget = hide.hidden_widget()
+        # hide this input field
         return render(request, 'form.html', context)
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
 
     def get_initial(self):
         initial = super().get_initial()
@@ -37,7 +44,6 @@ class MakeApptView(LoginRequiredMixin, generic.CreateView):
         initial['email'] = self.request.email
         initial['time'] = ''
         initial['date'] = ''
-        initial['user'] = self.request.user
         return initial
         # Why does this not work to autofill the form?
     
@@ -49,7 +55,6 @@ class MakeApptView(LoginRequiredMixin, generic.CreateView):
             # appt.instance.name = request.user.username
             # appt.date = form.cleaned_data['date']
             # appt.time = form.cleaned_data['time']
-            # appt.user = request.user
             # appt.slug = 'newslug'
             # appt.save()
             form.save()
