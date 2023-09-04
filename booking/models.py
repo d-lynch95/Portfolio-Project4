@@ -14,7 +14,6 @@ class Post(models.Model):
     date = models.DateField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     slug = models.SlugField(max_length=100, unique=True, blank=True)
-    # need to add appointment Id and user information
 
     def save(self, *args, **kwargs):
             if not self.slug:

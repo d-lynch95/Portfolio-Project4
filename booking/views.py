@@ -38,19 +38,8 @@ class MakeApptView(LoginRequiredMixin, generic.CreateView):
         context = {"form": form}
         hide = form.fields['slug']
         hide.widget = hide.hidden_widget()
-        # hide this input field
         return render(request, 'form.html', context)
-
-
-    def get_initial(self):
-        initial = super().get_initial()
-        initial['name'] = self.request.name
-        initial['phone'] = ''
-        initial['email'] = self.request.email
-        initial['time'] = ''
-        initial['date'] = ''
-        return initial
-        # Why does this not work to autofill the form?
+        
     
     def post(self, request):
         form = ApptForm(request.POST)
