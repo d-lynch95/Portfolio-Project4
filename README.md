@@ -4,10 +4,10 @@ HappyTravels appointment booking service is a web based booking application to a
 
 
 <!-- Add live link -->
-[Live Website]()
+[Live Website](https://happy-travels-appt-booking-469f488c0638.herokuapp.com/)
 
 <!-- Add responsive mockup -->
-![AmiResponsive Mockup](assets/media/dungeonresponsive.png)
+![AmiResponsive Mockup]()
 
 ## User Goals and Stories
 
@@ -297,8 +297,7 @@ I ran through all of the functions and tested each option to record whether ther
   - From the source section drop-down menu, select the Main Branch
   - Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-The live link can be found here - 
-<!-- Add live link -->
+The live link can be found here - [Happy-Travels-Appt-Booking](https://happy-travels-appt-booking-469f488c0638.herokuapp.com/)
 
 - Clone the Repository Code Locally
   - Navigate to the GitHub Repository you want to clone to use locally:
