@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="d-flex flex-column align-items-center">
+    <h1>404 Page Not Found</h1>
+    <p>Ooops Looks like there's nothing here!</p>
+
+    <p> Click<a href="{% url 'homepage' %}" class="btn button-style">here</a> to return to our homepage</p>
+</div>
+{% endblock %}
