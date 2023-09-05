@@ -6,24 +6,20 @@
 
         <!-- Appointments display -->
         <div class="col-12 mt-3 left">
-            <h1>Test this code</h1>
+            <div class="h1 text-center">Manage your appointments</div>
             <div class="row">
             {% for post in post_list %}
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
-                            <a href="#" class="post-link">
                                 <h2 class="card-title"> {{ post.name }} </h2>
                                     <!-- Change this h2 to appointment number -->
                                 <p class="card-text">
-                                    {{ post.id }}. </br>
-                                    {{ post.name }} </br>
                                     {{ post.phone }} </br>
                                     {{ post.email }} </br>
-                                    {{ post.time }} </br>
-                                    {{ post.date }} </br>
+                                    Time: {{ post.get_time_display }} <br>
+                                    Date: {{ post.date }} </br>
                                 </p>
-                            </a>
                             <div class="card-footer">
                                 <a href="{% url 'edit' slug=post.slug %}">
                                     <button class="btn btn-secondary">Change Appointment</button>
