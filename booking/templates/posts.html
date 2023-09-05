@@ -13,7 +13,6 @@
                     <div class="card mb-4">
                         <div class="card-body">
                                 <h2 class="card-title"> {{ post.name }} </h2>
-                                    <!-- Change this h2 to appointment number -->
                                 <p class="card-text">
                                     {{ post.phone }} </br>
                                     {{ post.email }} </br>
@@ -31,12 +30,6 @@
                         </div>
                     </div>
                 </div>
-            {% if forloop.counter|divisibleby:4 %}
-            </div>
-            <div class="row"></div>
-            <!-- Do I need to add pagination to this section?
-                'Creating our first view' 4:40-->
-            {% endif %}
             {% endfor %}
         </div>
 
