@@ -17,3 +17,5 @@ class ApptForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.helper = FormHelper()
         self.helper.add_input(Submit('submit', 'Submit'))
+        self.fields['date'].widget.attrs['class'] = 'datepicker'
+        self.fields['date'].widget.attrs['autocomplete'] = 'off'
