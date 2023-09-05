@@ -18,15 +18,17 @@ Make a booking
     Your appointment has been saved succesfully
 </div>
 {% else %}
-
-    <h1>Create Post</h1>
+    <div class="container">
+        <h1>Create your appointment</h1>
+    </div>
 
     {% if user.is_authenticated %}
+    <div class="container p-5 border">
         <form method="post">
             {% csrf_token %}
             {% crispy form %}
         </form>
-    
+    </div>
     {% else %}
         <h2>Please <a href="{% url 'account_login' %}">log in</a> to create an appointment </h2>
     {% endif %}
