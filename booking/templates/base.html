@@ -18,6 +18,13 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'media/favicon//favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'media/favicon//favicon-16x16.png' %}">
     <link rel="manifest" href="/site.webmanifest">
+    {% block postload_js %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.min.js" 
+        integrity="sha512-OvBgP9A2JBgiRad/mM36mkzXSXaJE9BEIENnVEmeZdITvwT09xnxLtT4twkCa8m/loMbPHsvPl0T8lRGVBwjlQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    {% endblock %}
 
 </head>
 
@@ -92,6 +99,13 @@
             <a href="https://www.instagram.com/happytravelsoz/?hl=en" target="_blank"><i class="fa-brands fa-instagram" ></i></a>
             <a href="https://www.youtube.com/c/HappyTravelsOz/videos" target="_blank"><i class="fa-brands fa-youtube"></i></a>  
     </footer>
+
+    {% block extra_js %}
+    <script>
+
+    </script>
+    {% endblock %}
+
 </body>
 
 </html>
