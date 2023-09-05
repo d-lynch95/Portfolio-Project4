@@ -354,7 +354,11 @@ The live link can be found here - [Happy-Travels-Appt-Booking](https://happy-tra
 
 - The format and template for the README file was borrowed from the [Code institute](https://codeinstitute.net/ie/).
 
+- The images were taken from [Pexels](https://www.pexels.com/) and [Unsplash](https://unsplash.com/)
+
 - The image conversions from jpg to webp were done with [Convertio](https://convertio.co)
+
+
 
 
 ### Coding help
