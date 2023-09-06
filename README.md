@@ -75,7 +75,7 @@ HappyTravels appointment booking service is a web based booking application to a
 ## Design
 
 ### Font
-<!-- Add font section-->
+I used the Montserrat and Poppins fonts from GoogleFonts. I opted for these fonts as they are clean, easy to read and versatile which make them perfect for a youth adventure travel website. I opted to use Monterrat for the headings and Poppins for the body. 
 
 ### Structure
 <!-- Add structure section. Justify as to why certain structure has been used -->
@@ -116,8 +116,6 @@ III. Epic 3 - Making appointments
   - As a user, I would like to view my bookings when I need to check the information
   - As a user, I would like to be able to edit a booking so that I can make changes when needed
   - As a user I would like to delete a booking when I no longer require it
-
-
 
 
 IV. Epic 4 - Deployment Epic  
