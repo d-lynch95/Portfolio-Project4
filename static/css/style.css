@@ -1,3 +1,35 @@
 #contacttable {
     padding-left: 5vw;
 }
+
+/* coding for hero image on contact us page */
+.hero-image {
+    display: flex;
+    align-items: flex-end;
+    height: 80vh;
+    width: 100vw;
+    position:relative;
+    border-radius: 3%;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url('../media/whitehaven.webp');
+    z-index: index;
+}
+
+.overlay {
+    position:absolute;
+    height:100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0); 
+    color: white;
+    text-shadow: 2px 2px 3px rgba(100,100,100,100);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: larger;
+    font-family: 'Unbounded';
+    z-index: index 2;;
+}
