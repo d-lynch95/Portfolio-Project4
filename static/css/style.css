@@ -1,5 +1,19 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:ital,wght@1,200&display=swap');
+</style>
+
 #contacttable {
     padding-left: 5vw;
+}
+
+/* Code for the headings and body text */
+
+h1{
+    font-family: Montserrat;
+}
+
+body{
+    font-family: Poppins;
 }
 
 /* coding for hero image on contact us page */

@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from django.views import generic
 from django.views.generic import ListView, DetailView, UpdateView, CreateView, DeleteView
 # Do I need both of these views imports?
+from django.contrib import messages
 from .models import Post
 from .forms import ApptForm
 
@@ -46,11 +47,28 @@ class MakeApptView(LoginRequiredMixin, generic.CreateView):
         if form.is_valid():
             form = form.save(commit=False)
             form.user = request.user
+            # check for an existing appointment
+            existing_appt = Post.objects.filter(
+                date=form.date,
+                time=form.time
+            ).first()
+            if existing_appt:
+
+                context = {"form": form}
+                return render(request, 'form.html', context)
+
             form.save()
             return redirect("/posts/")
+
+            messages.success(
+            self.request,
+            f'Booking confirmed for {time} guests on {date}'
+        )
         else:
             context = {"form": form}
             return render(request, 'form.html', context)
+
+        
 
 class EditApptView(LoginRequiredMixin, generic.UpdateView):
     model = Post
