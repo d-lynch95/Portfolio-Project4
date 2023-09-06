@@ -1,16 +1,18 @@
 /* Date picker */
 #ui-datepicker-div {
-    background-color: black;
-    width: 15em;
+    background-color: white;
+    width: 11em;
+    border-style: double;
 }
 
 tr td, tr th {
-    background-color: black !important;
+    background-color: orange !important;
+
     color: white;
 }
 
 .ui-datepicker-header a {
-    color: #d4c248;
+    color: black;
     font-weight: 400;
     text-decoration: none;
 }
@@ -22,15 +24,15 @@ tr td, tr th {
 }
 
 .ui-datepicker-calendar {
-    color: white;
+    color: black;
 }
 
 .ui-datepicker-month {
-    color: white;
+    color: black;
 }
 
 .ui-datepicker-year {
-    color: white;
+    color: black;
 }
 
 a.ui-datepicker-next {
@@ -38,8 +40,8 @@ a.ui-datepicker-next {
 }
 
 .ui-datepicker-today a {
-    background-color: #d4c248;
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 td a {

@@ -368,6 +368,8 @@ The live link can be found here - [Happy-Travels-Appt-Booking](https://happy-tra
 
 - The outline template for the Python was provided by the [Code Institiute](https://www.codeinstitute.com)
 
+- The hero image code was taken from my [PP1](https://github.com/d-lynch95/Portfolio-1-GreatOceanRoadsters/blob/main/css/style.css)
+
 - I also took a lot of inspiration from the Code institute I think Therefore I blog Walk through [Code Institiute](https://www.codeinstitute.com)
 
 - A lot of the python coding was done with help from the tutorial pages at [w3schools](https://www.w3schools.com/)
