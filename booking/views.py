@@ -48,14 +48,14 @@ class MakeApptView(LoginRequiredMixin, generic.CreateView):
             form = form.save(commit=False)
             form.user = request.user
             form.save()
+            messages.success(request, f'Your appointment has been confirmed')
             return redirect("/posts/")
 
         else:
             context = {"form": form}
             return render(request, 'form.html', context)
 
-        
-
+    
 class EditApptView(LoginRequiredMixin, generic.UpdateView):
     model = Post
     form_class = ApptForm
