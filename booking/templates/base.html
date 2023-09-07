@@ -90,22 +90,15 @@
         {% endblock %}
     </div>
 
-    <div>
-        {% if messages %}
-            {% for message in messages %}
-                {% if message.tags == 'success'%}
-                    <script type=text/javascript>toastr.{{ message.tags }}(' Your appointment has been confirmed ')</script>
-                {% elif message.tags == 'info' %}
-                    <script type=text/javascript>toastr.{{ message.tags }}(' Your appoiintment has been updated' )</script>
-                {% elif message.tags == 'warning' %}
-                    <script type=text/javascript>toastr.{{ message.tags }}(' Your appointment has been deleted ')</script>
-                {% elif message.tags == 'error' %}
-                    <script type=text/javascript>toastr.{{ message.tags }}(' message ')</script>
-                {% endif %}
-            {% endfor %}
-        {% endif %}
-        
+    {% if messages %}
+    <!-- messages -->
+    <div class="toasts">
+        {% for message in messages %}
+        {% include 'includes/toasts/toast.html' %}
+        {% endfor %}
     </div>
+    {% endif %}
+
 
     <main class="flex-shrink-0 main-bg">
         {% block content %}
