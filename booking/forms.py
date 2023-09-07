@@ -10,7 +10,7 @@ from django.forms.widgets import HiddenInput
 class ApptForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ('name', 'phone', 'email', 'date', 'time', 'slug',  )
+        fields = ('name', 'phone', 'email', 'date', 'time', 'slug',)
         widgets = {
             'slug': HiddenInput(),
         }

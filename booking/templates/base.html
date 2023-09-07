@@ -25,6 +25,9 @@
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/toastr.css' %}" media="all">
+    <script type="text/javascript" src="{% static 'js/toastr.min.js' %}"></script>  
     {% endblock %}
 
 </head>
@@ -89,12 +92,19 @@
 
     <div>
         {% if messages %}
-            <ul class="messages">
-                {% for message in messages %}
-                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-                {% endfor %}
-            </ul>
+            {% for message in messages %}
+                {% if message.tags == 'success'%}
+                    <script type=text/javascript>toastr.{{ message.tags }}(' Your appointment has been confirmed ')</script>
+                {% elif message.tags == 'info' %}
+                    <script type=text/javascript>toastr.{{ message.tags }}(' Your appoiintment has been updated' )</script>
+                {% elif message.tags == 'warning' %}
+                    <script type=text/javascript>toastr.{{ message.tags }}(' Your appointment has been deleted ')</script>
+                {% elif message.tags == 'error' %}
+                    <script type=text/javascript>toastr.{{ message.tags }}(' message ')</script>
+                {% endif %}
+            {% endfor %}
         {% endif %}
+        
     </div>
 
     <main class="flex-shrink-0 main-bg">
