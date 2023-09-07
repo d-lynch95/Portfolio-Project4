@@ -19,6 +19,8 @@ class ApptForm(forms.ModelForm):
         cleaned_data = super().clean()
         date = cleaned_data.get('date')
         time = cleaned_data.get('time')
+        if date < date.today():
+            raise forms.ValidationError("This date cannot be selected as it has already passed")
         if Post.objects.filter(date=date).exists() and Post.objects.filter(time=time).exists():
             raise forms.ValidationError("This appointment time is not available. Please select another")
         return cleaned_data
