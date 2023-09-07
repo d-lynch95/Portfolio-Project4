@@ -1,10 +1,4 @@
-<style>
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Montserrat:wght@600&family=Poppins:ital,wght@1,200&display=swap');
-</style>
-
-#contacttable {
-    padding-left: 5vw;
-}
 
 /* Code for the headings and body text */
 
@@ -16,14 +10,20 @@ body{
     font-family: 'Montserrat';
 }
 
-
+/* Code for the images on the index page */
 .indeximage {
-    height: 30vh;
+    height: 60vh;
     width: auto;
-
-
+    border-radius: 40% 40%;
 }
 
+/* Text on index.html page */
+.text-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2%;
+}
 
 
 /* coding for hero image on contact us page */
@@ -58,3 +58,12 @@ body{
     z-index: index 2;;
 }
 
+/* Code for table on contact us page */
+
+.contactbox {
+    background-color: antiquewhite;
+}
+
+#help {
+    font-size: x-large;
+}
