@@ -251,7 +251,7 @@ The favicon was created using the company logo. This favicon sits in the web bro
 
 ## Testing 
 
-I created an extra Testing.md page as the file was too large to fit in this README.
+I created an extra [Testing.md](https://github.com/d-lynch95/Portfolio-Project4/blob/main/Testing.md) page as the file was too large to fit in this README.
 
 ### BUGS
  - I encountered several bugs while creating this project.
