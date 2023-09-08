@@ -90,7 +90,7 @@ iframe {
 }
 
 #apptlink {
-    background-color: greenyellow;
+    background-color: rgb(255, 168, 47);
     border-radius: 10%;
 }
 
@@ -100,8 +100,6 @@ iframe {
 }
 }
 
-}
-
 
 /* code for tablets */
 @media only screen and (min-width: 889px) {
@@ -109,6 +107,10 @@ iframe {
 .contactdiv{
     display:flex;
     flex-direction: column;
+}
+
+iframe {
+    margin-left: 10vw;
 }
 }
 
