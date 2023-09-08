@@ -139,8 +139,6 @@ V. Epic 5 - Documentation
   - The website  is hosted on heroku
 - Convertio.co
   - This site was used to convert jpg and png files to webp files
-- LucidChart 
-  - The database diagram was designed on lucid chart
 - Favicon.io
   - used for generating the website favicon
 - Diffchecker 
@@ -307,13 +305,7 @@ I did not test this site on a tablet but did utilise the google chrome Dev tools
 ### Manual Testing
 
 #### Functional Testing 
-
-I tested each of the pathways through the game individually to make sure there were no dead ends of any issues.
-I ran through all of the functions and tested each option to record whether there were any issues. All of the functions passed the manual user testing and there were no issues with the code.
-
-![Testing functions](assets/features/functiontest1.png)
-![Testing functions](assets/features/functionTest2.png)
-
+I created a seperate [Testing.md]() file that outlines all of the 
 
 
 ### Unfixed Bugs
@@ -385,8 +377,6 @@ The live link can be found here - [Happy-Travels-Appt-Booking](https://happy-tra
 - The images were taken from [Pexels](https://www.pexels.com/) and [Unsplash](https://unsplash.com/)
 
 - The image conversions from jpg to webp were done with [Convertio](https://convertio.co)
-
-
 
 
 ### Coding help

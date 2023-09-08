@@ -37,7 +37,6 @@ body{
     background-size: cover;
     background-position: 50% 50%;
     background-image: url('../media/whitehaven.webp');
-    z-index: index;
 }
 
 .overlay {
@@ -48,14 +47,13 @@ body{
     left: 0;
     background: rgba(0, 0, 0, 0); 
     color: white;
-    text-shadow: 2px 2px 3px rgba(100,100,100,100);
+    text-shadow: 2px 2px 3px rgb(100,100,100);
     display:flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     font-size: larger;
     font-family: 'Unbounded';
-    z-index: index 2;;
 }
 
 iframe {
