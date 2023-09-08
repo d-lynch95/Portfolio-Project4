@@ -323,9 +323,9 @@ I did not test this site on a tablet but did utilise the google chrome Dev tools
 - Python
   - No errors were found when passing through the [CI code linter](https://pep8ci.herokuapp.com/#)
   
-  <details>
   <summary>See Linter results</sumary>
-
+  <details>
+  
   ![Admin.py](static/media/testing/admin.png)
 
   ![App.py](static/media/testing/apps.png)
