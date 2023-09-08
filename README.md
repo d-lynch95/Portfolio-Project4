@@ -85,16 +85,16 @@ I used the Montserrat and Poppins fonts from GoogleFonts. I opted for these font
   <summary>See wireframes</summary>
 
   - Homepage
-  [Homepage](static/media/wireframes/home.png)
+  ![Homepage](static/media/wireframes/home.png)
 
   - Contact Us
-  [Contact Us](static/media/wireframes/contact%20us.png)
+  ![Contact Us](static/media/wireframes/contact%20us.png)
   
   - Make an appointment
-  [Make an appointment](static/media/wireframes/Make%20appointments.png)
+  ![Make an appointment](static/media/wireframes/Make%20appointments.png)
 
   - Manage appointments
-  [Manage appointments](static/media/wireframes/manage%20appointments.png)
+  ![Manage appointments](static/media/wireframes/manage%20appointments.png)
 </details>
 
 
