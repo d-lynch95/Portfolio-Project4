@@ -323,20 +323,20 @@ I did not test this site on a tablet but did utilise the google chrome Dev tools
 - Python
   - No errors were found when passing through the [CI code linter](https://pep8ci.herokuapp.com/#)
   
-  <detailsy>
-  <summary>See Linter restults</sumary>
+  <details>
+  <summary>See Linter results</sumary>
 
-  ![Admin.py](media/testing/admin.png)
+  ![Admin.py](static/media/testing/admin.png)
 
-  ![App.py](media/testing/apps.png)
+  ![App.py](static/media/testing/apps.png)
 
-  ![Forms.py](media/testing/forms.png)
+  ![Forms.py](static/media/testing/forms.png)
 
-  ![Models.py](media/testing/models.png)
+  ![Models.py](static/media/testing/models.png)
 
-  ![Urls.py](media/testing/urls.png)
+  ![Urls.py](static/media/testing/urls.png)
 
-  ![Views.py](media/testing/views.png)
+  ![Views.py](static/media/testing/views.png)
 
 
   </details>
