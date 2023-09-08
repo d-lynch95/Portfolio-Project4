@@ -37,7 +37,7 @@ body{
     position:relative;
     border-radius: 3%;
     background-size: cover;
-    background-position: 30% 80%; 
+    background-position: 50% 50%; 
 }
 
 .overlay {
@@ -112,7 +112,6 @@ iframe {
     margin-left: 10vw;
 }
 }
-
 
 
 /* Code for desktop */
