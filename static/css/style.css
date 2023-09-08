@@ -10,6 +10,10 @@ body{
     font-family: 'Montserrat';
 }
 
+footer {
+    margin-top: auto;
+}
+
 /* Code for the images on the index page */
 .indeximage {
     height: 60vh;
