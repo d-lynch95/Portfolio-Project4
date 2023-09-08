@@ -323,8 +323,8 @@ I did not test this site on a tablet but did utilise the google chrome Dev tools
 - Python
   - No errors were found when passing through the [CI code linter](https://pep8ci.herokuapp.com/#)
   
-  <summary>
-  <details>See Linter restults</details>
+  <detailsy>
+  <summary>See Linter restults</sumary>
 
   ![Admin.py](media/testing/admin.png)
 
@@ -339,7 +339,7 @@ I did not test this site on a tablet but did utilise the google chrome Dev tools
   ![Views.py](media/testing/views.png)
 
 
-  <summary>
+  </details>
 
 
 
@@ -347,7 +347,7 @@ I did not test this site on a tablet but did utilise the google chrome Dev tools
 ### Manual Testing
 
 #### Functional Testing 
-I created a seperate [Testing.md]() file that outlines all of the tests completed
+I created a seperate [Testing.md](https://github.com/d-lynch95/Portfolio-Project4/blob/main/Testing.md) file that outlines all of the tests completed
 
 
 ### Unfixed Bugs
