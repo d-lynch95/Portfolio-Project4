@@ -71,10 +71,16 @@ class EditApptView(LoginRequiredMixin, generic.UpdateView):
         queryset = Post.objects
         post = get_object_or_404(queryset, slug=slug)
         form = self.form_class(instance=post)
+        messages.success(
+            self.request,
+            f'Your appointment has been changed.')
         return render(request, "editform.html", {"form": form})
 
 
 class DeleteAppt(LoginRequiredMixin, DeleteView):
     model = Post
     template_name = 'post_confirm_delete.html'
+    messages.success(
+            self.request,
+            f'Your appointment has been deleted.')
     success_url = "/posts/"
