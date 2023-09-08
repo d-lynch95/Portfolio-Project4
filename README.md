@@ -298,6 +298,12 @@ I created an extra [Testing.md](https://github.com/d-lynch95/Portfolio-Project4/
 
 - I was having issues with calling the time and date data to prevent double bookings. The code segment I was using was only calling the date data and not allowing any appointments to be made on the same days. I fixed this by adding the django Q to my code and combining time and date. This fixed the bug.
 
+- I was having issues with loading my images to the heroku deployment site. I altered some of the settings in the settings.py file and then added a {% load static %} tag on my index.html page and this fixed the issue.
+
+- I was also having an issue with loading a background-image file in the css file as cloudinary would not work with the css. I opted to use an inline style instead for the hero image on the contact us page and this fixed the issue"
+
+
+
 
 ### User Testing
 
