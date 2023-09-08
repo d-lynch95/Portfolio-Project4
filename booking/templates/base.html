@@ -90,11 +90,14 @@
 
     {% if messages %}
     <!-- messages -->
-    <div class="toasts">
+    <div class="row">>
         {% for message in messages %}
+        <div class="alert {{message.tags}} alert-dismissable fade show" 
+        id="message" role="alert">
             {% if message.tags == 'success'%}
-                {% include 'includes/toasts/toasts.html' %}
+                {{ messages | safe}}
             {% endif %}
+        </div>
         {% endfor %}
     </div>
     {% endif %}
