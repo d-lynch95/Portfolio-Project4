@@ -4,10 +4,9 @@
 
 {% block header %}
 <section class="hero-image">
-
     <div id="contrast"></div>
-    <div>
-        <img src="{% static 'media/whitehaven.webp' %}" class="overlay" alt="blue ocean and white beach scenery shot">
+    <div class="overlay" style="background-image:url({% static 'media/whitehaven.webp' %});">
+        <div id="background">
         <h1 class="hero-text">Get in contact </h1>
     </div>
 </section>
