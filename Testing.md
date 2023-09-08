@@ -170,5 +170,5 @@ Tests were performed on the create booking to ensure that:
 
 1. A customer cannot book a date in the past
 2. A customer cannot book for the same date and time as a previously made appointment
-3. A customer cannot edit another users appointment
-4. Forms cannot be submitted when required fields are empty
+3. A customer cannot edit or delete another users appointment
+4. Forms cannot be submitted when required fields are empty.
