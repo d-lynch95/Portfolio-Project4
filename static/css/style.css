@@ -39,9 +39,7 @@ footer {
     position:relative;
     border-radius: 3%;
     background-size: cover;
-    background-position: 50% 50%;
-    background-image: { % static 'media/whitehaven.png' % };
-  
+    background-position: 50% 50%; 
 }
 
 .overlay {
