@@ -79,19 +79,14 @@ I used the Montserrat and Poppins fonts from GoogleFonts. I opted for these font
 
 ![ExampleFont](static/media/font.webp)
 
-### Structure
-<!-- Add structure section. Justify as to why certain structure has been used -->
 
-### Design flow chart
-
-This game flow and logic was designed using lucidchart. This was the first time using lucidchart so the chart is quite basic as it was made during the original genesis of the game. The game has since grown in size and stature and more text has been added to bulk up the options.
 
 
 ## Development
 
 ### Agile Methodology
 
-This project was developed using the Agile methodology. All epics and user stories implementation progress was tracked through Github projects Kanban Board which can be found here.
+This project was developed using the Agile methodology. All epics and user stories implementation progress was tracked through Github projects Kanban Board which can be found [here](https://github.com/users/d-lynch95/projects/3/views/1).
 
 ![KanabanBoard](static/media/KanbanPP4.webp)
 
@@ -240,11 +235,23 @@ V. Epic 5 - Documentation
 
   Register -> signup.html - Visible to logged out users
 
+
+- __Favicon__
+
+The favicon was created using the company logo. This favicon sits in the web browser tab and instantly allows the user to recognise the webpage. This adds to the customer experience.
+
+![Favicon](static/media/favicon.png)
+
 ### Features Left to Implement
 
-  -  Add in additional features here
+  -  I would like to add further email authentication
+    - I would like to have users confirm their email addresses upon registration.
+
+  - I would also like to implement user profiles. This would allow users to upload profile photos, include some information about themselves and also provide information about which services they are looking for.
 
 ## Testing 
+
+I created an extra Testing.md page as the file was too large to fit in this README.
 
 ### BUGS
  - I encountered several bugs while creating this project.
@@ -275,14 +282,20 @@ V. Epic 5 - Documentation
 
 - I was having an issue displaying the string value of time on the appointments page. I solved this by changing the {{ post.time }} code to {{ post.get_time_display }}. This then shows the string value that correlates with the time selected.
 
-- I was having issues with calling the time and date data to prevent double bookings. The code segment I was using was only calling the date data and not allowing any appointments to be made on the same days. I fixed this by adding the django Q to my code and combining time and date. This fixed the bug
-
-
+- I was having issues with calling the time and date data to prevent double bookings. The code segment I was using was only calling the date data and not allowing any appointments to be made on the same days. I fixed this by adding the django Q to my code and combining time and date. This fixed the bug.
 
 
 ### User Testing
 
 The application was tested on a macbook air using the google chrome browser.
+
+I also tested it on the following mobile devices:
+  OnePlus NordCE
+  Iphone12
+  Samsung Galaxy S
+All of these devices worked as intended.
+
+I did not test this site on a tablet but did utilise the google chrome Dev tools.
 
 
 ### Validator Testing 
