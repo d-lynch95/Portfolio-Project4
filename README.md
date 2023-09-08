@@ -75,7 +75,9 @@ HappyTravels appointment booking service is a web based booking application to a
 ## Design
 
 ### Font
-I used the Montserrat and Poppins fonts from GoogleFonts. I opted for these fonts as they are clean, easy to read and versatile which make them perfect for a youth adventure travel website. I opted to use Monterrat for the headings and Poppins for the body. 
+I used the Montserrat and Poppins fonts from GoogleFonts. I opted for these fonts as they are clean, easy to read and versatile which make them perfect for a youth adventure travel website. I opted to use Monterrat for the headings and Poppins for the body. I used the Caveat font for the h1 tags as this font is very easy on the eye, playful and suits the youth adventure market
+
+![ExampleFont](static/media/font.webp)
 
 ### Structure
 <!-- Add structure section. Justify as to why certain structure has been used -->
@@ -91,7 +93,7 @@ This game flow and logic was designed using lucidchart. This was the first time 
 
 This project was developed using the Agile methodology. All epics and user stories implementation progress was tracked through Github projects Kanban Board which can be found here.
 
-<!-- Insert screenshot of Kanban board-->
+![KanabanBoard](static/media/KanbanPP4.webp)
 
 
 This project had 5 main epics (Milestones)
@@ -182,9 +184,12 @@ V. Epic 5 - Documentation
 
   - The footer section allows the user to view the company’s social media to understand better the company’s product offerings.
 
+![HomePage](static/media/homepage.webp)
 
 - __Contact Us Page__
   - The contact us section allows the users to contact the company directly if they have any issues. This adds to the user experience as the user may have some questions that they need answered before they are prepared to make an appointment. This allows the user to contact the company in person or online.
+
+  ![contactUs](static/media/contactus.webp)
 
 
 - __Make an appointment page__
@@ -194,6 +199,8 @@ V. Epic 5 - Documentation
   
   - If the user is not logged in then they will be redirected to the log in or register account page. When the user has completed the form they are then redirected to the Manage appointments page
 
+  ![makeAppointments](static/media/makeappt.webp)
+
 
 - __Manage appointments__
   - This page is only viewable if the user has logged in. 
@@ -202,10 +209,15 @@ V. Epic 5 - Documentation
   
   - If the user wishes to edit their appointment then they will be redirected to the form where their information will be autofilled and they can edit it as they need to. If the user chooses to delete their appointment then it will be removed from the database.
 
+  ![ManageAppointments](static/media/manageappt.webp)
+
 
 - __Navigation Menu__
 
 - The Navigation contains links for Home, contact us, Make an appointment, Manage Appointments and has allauth options.
+
+![NavigationMenu](static/media/NavBar.webp)
+
 - The following navigation items are available on all pages:
 
   Home -> index.html - Visible to all
