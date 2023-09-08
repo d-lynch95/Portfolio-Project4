@@ -275,6 +275,8 @@ V. Epic 5 - Documentation
 
 - I was having an issue displaying the string value of time on the appointments page. I solved this by changing the {{ post.time }} code to {{ post.get_time_display }}. This then shows the string value that correlates with the time selected.
 
+- I was having issues with calling the time and date data to prevent double bookings. The code segment I was using was only calling the date data and not allowing any appointments to be made on the same days. I fixed this by adding the django Q to my code and combining time and date. This fixed the bug
+
 
 
 
