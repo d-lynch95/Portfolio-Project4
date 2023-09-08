@@ -7,6 +7,10 @@
 <div class="container text-center">
      <h1 id="slogan">Welcome to Happy Travels – Your Gateway to Australian Adventure!</h1>
 </div>
+
+{% endblock %}
+
+{% block content %}
 <div class="row">
      <div class="col-sm-5 text-box">
           <p>Embark on the journey of a lifetime with Happy Travels, your premier partner in exploring
@@ -58,4 +62,4 @@
           <a href="{% url 'form' %}"><button id="apptlink" ><h2>Set up an appointment with one of our travel sales specialists now</h2></button></a>
      </div>
 </div>
-{% endblock %}
+{% endblock content %}
