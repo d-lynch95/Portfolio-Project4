@@ -94,13 +94,22 @@ iframe {
     border-radius: 10%;
 }
 
+.contactdiv{
+    display:flex;
+    flex-direction: column;
+}
+}
+
 }
 
 
 /* code for tablets */
 @media only screen and (min-width: 889px) {
 
-
+.contactdiv{
+    display:flex;
+    flex-direction: column;
+}
 }
 
 
@@ -108,6 +117,21 @@ iframe {
 /* Code for desktop */
 @media only screen and (min-width: 990px) {
 
+.indeximage {
+    height: auto;
+    width: 55vw;
+}
+
+#apptlink {
+    background-color: rgb(255, 168, 47);
+    border-radius: 10%;
+    margin-top: 20px;
+}
+
+.contactdiv{
+    display:flex;
+    flex-direction: row;
+}
 
 }
 
