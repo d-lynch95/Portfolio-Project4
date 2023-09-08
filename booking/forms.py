@@ -2,6 +2,7 @@ from django import forms
 from .models import Post
 from datetime import datetime
 from django.utils import timezone
+from django.db.models import Q
 from django.core.exceptions import ValidationError, ObjectDoesNotExist
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
@@ -21,7 +22,7 @@ class ApptForm(forms.ModelForm):
         time = cleaned_data.get('time')
         if date < date.today():
             raise forms.ValidationError("This date cannot be selected as it has already passed")
-        if Post.objects.filter(date=date).exists() and Post.objects.filter(time=time).exists():
+        if Post.objects.filter(Q(date=date) & Q(time=time)).exists():
             raise forms.ValidationError("This appointment time is not available. Please select another")
         return cleaned_data
 
