@@ -8,6 +8,7 @@ from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
 from django.forms.widgets import HiddenInput
 
+
 class ApptForm(forms.ModelForm):
     class Meta:
         model = Post
@@ -21,9 +22,13 @@ class ApptForm(forms.ModelForm):
         date = cleaned_data.get('date')
         time = cleaned_data.get('time')
         if date < date.today():
-            raise forms.ValidationError("This date cannot be selected as it has already passed")
+            raise forms.ValidationError(
+                    "This date cannot be selected as it has already passed"
+                )
         if Post.objects.filter(Q(date=date) & Q(time=time)).exists():
-            raise forms.ValidationError("This appointment time is not available. Please select another")
+            raise forms.ValidationError(
+                "This appointment time is not available. Please select another"
+                )
         return cleaned_data
 
     def __init__(self, *args, **kwargs):
