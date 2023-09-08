@@ -322,12 +322,32 @@ I did not test this site on a tablet but did utilise the google chrome Dev tools
 
 - Python
   - No errors were found when passing through the [CI code linter](https://pep8ci.herokuapp.com/#)
-  ![CI python Code Linter](assets/features/Python-Validation.webp)
+  
+  <summary>
+  <details>See Linter restults</details>
+
+  ![Admin.py](media/testing/admin.png)
+
+  ![App.py](media/testing/apps.png)
+
+  ![Forms.py](media/testing/forms.png)
+
+  ![Models.py](media/testing/models.png)
+
+  ![Urls.py](media/testing/urls.png)
+
+  ![Views.py](media/testing/views.png)
+
+
+  <summary>
+
+
+
 
 ### Manual Testing
 
 #### Functional Testing 
-I created a seperate [Testing.md]() file that outlines all of the 
+I created a seperate [Testing.md]() file that outlines all of the tests completed
 
 
 ### Unfixed Bugs
