@@ -36,7 +36,7 @@ body{
     border-radius: 3%;
     background-size: cover;
     background-position: 50% 50%;
-    background-image: url('../media/whitehaven.webp');
+    background-image: src="{% static 'media/whitehaven.png' %}";
 }
 
 .overlay {
