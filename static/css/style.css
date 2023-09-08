@@ -64,7 +64,7 @@ iframe {
 
 /* code for mobile first design */
 
-@media only screen and (min-width: 360px) {
+@media only screen and (max-width: 768px) {
 
 .indeximage {
     width: 90vw;
@@ -98,7 +98,7 @@ iframe {
 
 
 /* code for tablets */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 889px) {
 
 
 }
@@ -106,7 +106,7 @@ iframe {
 
 
 /* Code for desktop */
-@media only screen and (min-width: 889px) {
+@media only screen and (min-width: 990px) {
 
 
 }
