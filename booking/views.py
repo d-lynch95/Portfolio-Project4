@@ -73,10 +73,6 @@ class EditApptView(LoginRequiredMixin, generic.UpdateView):
         form = self.form_class(instance=post)
         return render(request, "editform.html", {"form": form})
 
-    def post(self, request, slug, *args, **kwargs):
-        messages.success(request, f'Your appointment has been changed')
-        return redirect("/posts/")
-
 
 class DeleteAppt(LoginRequiredMixin, DeleteView):
     model = Post
