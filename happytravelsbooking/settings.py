@@ -50,7 +50,6 @@ INSTALLED_APPS = [
     'django_summernote',
     'crispy_forms',
     'bootstrap5',
-    'django_extensions',
 ]
 
 SITE_ID = 1
@@ -76,11 +75,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'happytravelsbooking.urls'
-
-GRAPH_MODELS = {
-  'all_applications': True,
-  'group_models': True,
-}
 
 TEMPLATES = [
     {
