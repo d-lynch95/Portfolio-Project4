@@ -58,14 +58,8 @@ body{
     z-index: index 2;;
 }
 
-/* Code for table on contact us page */
-
-.contactbox {
-    background-color: antiquewhite;
-}
-
-#help {
-    font-size: x-large;
+iframe {
+    margin-left: 10px;
 }
 
 /* code for mobile first design */
