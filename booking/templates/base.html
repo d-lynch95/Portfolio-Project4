@@ -94,7 +94,9 @@
     <!-- messages -->
     <div class="toasts">
         {% for message in messages %}
-        {% include 'includes/toasts/toast.html' %}
+            {% if message.tags == 'success'%}
+                {% include 'includes/toasts/toasts.html' %}
+            {% endif %}
         {% endfor %}
     </div>
     {% endif %}

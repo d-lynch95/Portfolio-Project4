@@ -48,7 +48,10 @@ class MakeApptView(LoginRequiredMixin, generic.CreateView):
             form = form.save(commit=False)
             form.user = request.user
             form.save()
-            messages.success()
+            messages.success(
+            self.request,
+            f'Your appointment has been confirmed.'
+            )
             return redirect("/posts/")
 
         else:

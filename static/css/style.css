@@ -67,3 +67,56 @@ body{
 #help {
     font-size: x-large;
 }
+
+/* code for mobile first design */
+
+@media only screen and (min-width: 360px) {
+
+.indeximage {
+    width: 90vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding-left: 5vw;
+}
+
+#slogan {
+    display: flex;
+    align-items: center;
+}
+
+.text-box {
+    display: flex;
+    align-items: center;
+    margin-left: 10vw;
+}
+
+.hideme {
+    display: none;
+}
+
+#apptlink {
+    background-color: greenyellow;
+    border-radius: 10%;
+}
+
+}
+
+
+/* code for tablets */
+@media only screen and (min-width: 768px) {
+
+
+}
+
+
+
+/* Code for desktop */
+@media only screen and (min-width: 889px) {
+
+
+}
+
+
+
+
