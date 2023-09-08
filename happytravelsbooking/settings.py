@@ -76,6 +76,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'happytravelsbooking.urls'
 
+GRAPH_MODELS = {
+  'all_applications': True,
+  'group_models': True,
+}
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
