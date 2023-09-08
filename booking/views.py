@@ -1,17 +1,18 @@
+from django.contrib import messages
+from .models import Post
+from .forms import ApptForm
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse
 from django.views import generic
-from django.views.generic import ListView, DetailView, UpdateView, CreateView, DeleteView
-from django.contrib import messages
-from .models import Post
-from .forms import ApptForm
+from django.views.generic import ListView, DetailView,
+UpdateView, CreateView, DeleteView
+
 
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.order_by('date')
     template_name = 'posts.html'
-
 
     def get_queryset(self):
         user = self.request.user
@@ -36,6 +37,7 @@ def appointment(request):
 def posts(request):
     return render(request, 'posts.html')
 
+
 class MakeApptView(LoginRequiredMixin, generic.CreateView):
     def get(self, request):
         form = ApptForm()
@@ -44,7 +46,6 @@ class MakeApptView(LoginRequiredMixin, generic.CreateView):
         hide.widget = hide.hidden_widget()
         return render(request, 'form.html', context)
 
-
     def post(self, request):
         form = ApptForm(request.POST)
         if form.is_valid():
@@ -52,15 +53,15 @@ class MakeApptView(LoginRequiredMixin, generic.CreateView):
             form.user = request.user
             form.save()
             messages.success(
-            self.request,
-            f'Your appointment has been confirmed.')
+                self.request,
+                f'Your appointment has been confirmed.')
             return redirect("/posts/")
 
         else:
             context = {"form": form}
             return render(request, 'form.html', context)
 
- 
+
 class EditApptView(LoginRequiredMixin, generic.UpdateView):
     model = Post
     form_class = ApptForm
