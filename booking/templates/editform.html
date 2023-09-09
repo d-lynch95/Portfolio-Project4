@@ -24,9 +24,10 @@ Edit your booking
 
     {% if user.is_authenticated %}
     <div class="container p-5 border">
-        <form method="post">
+        <form method="POST">
             {% csrf_token %}
-            {% crispy form %}
+            {{ form|crispy }}
+            <button class="btn btn-primary btn-lg " type="submit" value="Change appointment">Change Appointment</button>
         </form>
     </div>
 
@@ -40,7 +41,7 @@ Edit your booking
     <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="https://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
     <script>
-        $('.datepicker').datepicker();
+        // $('.datepicker').datepicker();
     </script>
 {% endblock %}
 

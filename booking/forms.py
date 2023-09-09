@@ -15,6 +15,7 @@ class ApptForm(forms.ModelForm):
         fields = ('name', 'phone', 'email', 'date', 'time', 'slug',)
         widgets = {
             'slug': HiddenInput(),
+            'date': forms.DateInput(attrs={'type': 'date'})
         }
 
     # This code prevents double bookings or bookings in the past
@@ -40,3 +41,12 @@ class ApptForm(forms.ModelForm):
         self.helper.add_input(Submit('submit', 'Submit'))
         self.fields['date'].widget.attrs['class'] = 'datepicker'
         self.fields['date'].widget.attrs['autocomplete'] = 'off'
+
+
+# class EditApptForm(forms.ModelForm):
+#     class Meta:
+#         model = Post
+#         fields = ('name', 'phone', 'email', 'date', 'time',)
+#         widgets = {
+#             'date': forms.DateInput(attrs={'type': 'date'})
+#         }
