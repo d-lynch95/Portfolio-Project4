@@ -23,11 +23,13 @@ Edit your booking
     <h1>Change your appointment</h1>
 
     {% if user.is_authenticated %}
+    <div class="container p-5 border">
         <form method="post">
             {% csrf_token %}
             {% crispy form %}
         </form>
-    
+    </div>
+
     {% else %}
         <h2>Please <a href="{% url 'account_login' %}">log in</a> to create an appointment </h2>
     {% endif %}
@@ -35,11 +37,11 @@ Edit your booking
 {% endif %}
 
 {% block extra_js %}
-<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="https://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
-<script>
-    $('.datepicker').datepicker();
-</script>
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+    <script>
+        $('.datepicker').datepicker();
+    </script>
 {% endblock %}
 
 {% endblock %}

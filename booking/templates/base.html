@@ -101,15 +101,14 @@
     </div>
     {% endif %}
 
-
-    <main class="flex-shrink-0 main-bg">
+    <main class="flex-shrink-0 main-bg mb-7">
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
     </main>
 
     <!-- Footer -->
-    <footer class="footer py-3 dark-bg">
+    <footer class="bg-white fixed-bottom">
         <p class="m-0 text-center text-black">Made by HappyTravels</p>
         <p class="m-0 text-center text-black">Follow us: 
             <a href="https://www.facebook.com/jobsandtravel/" target="_blank"><i class="fa-brands fa-square-facebook" style="color: #046ddc;"></i></a> 
@@ -118,8 +117,10 @@
     </footer>
 
     {% block extra_js %}
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
     <script>
-
+        $('.datepicker').datepicker();
     </script>
     {% endblock %}
 

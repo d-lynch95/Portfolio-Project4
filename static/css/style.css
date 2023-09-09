@@ -12,6 +12,15 @@ body{
     flex-direction: column;
 }
 
+#footer{
+    position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: black;
+   text-align: center;
+}
+
 /* Code for the images on the index page */
 .indeximage {
     height: 60vh;
