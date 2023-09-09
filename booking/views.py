@@ -7,12 +7,13 @@ from django.http import HttpResponse
 from django.views import generic
 from django.views.generic import ListView, UpdateView, CreateView, DeleteView
 
-
+# This class loads the different appointments
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.order_by('date')
     template_name = 'posts.html'
 
+    # Users can only see their own appointments. Staff can see all 
     def get_queryset(self):
         user = self.request.user
         if user.is_staff:
@@ -21,22 +22,22 @@ class PostList(generic.ListView):
             return Post.objects.filter(user=self.request.user).order_by('date')
 
 
+# Sends users to the homepage
 def homepage(request):
     return render(request, 'index.html')
 
 
+# Sends users to the contact us page
 def contact(request):
     return render(request, 'contact.html')
 
 
-def appointment(request):
-    return render(request, 'appointment.html')
-
-
+# Sends users to the posts page where appointments are stored
 def posts(request):
     return render(request, 'posts.html')
 
 
+# Allow users to create appointments
 class MakeApptView(LoginRequiredMixin, generic.CreateView):
     def get(self, request):
         form = ApptForm()
@@ -61,6 +62,7 @@ class MakeApptView(LoginRequiredMixin, generic.CreateView):
             return render(request, 'form.html', context)
 
 
+# Allow users to edit their appointments
 class EditApptView(LoginRequiredMixin, generic.UpdateView):
     model = Post
     form_class = ApptForm
@@ -83,6 +85,7 @@ class EditApptView(LoginRequiredMixin, generic.UpdateView):
         return render(request, "editform.html", {"form": form})
 
 
+# Allow users to delete their appointments
 class DeleteAppt(LoginRequiredMixin, DeleteView):
     model = Post
     template_name = 'post_confirm_delete.html'

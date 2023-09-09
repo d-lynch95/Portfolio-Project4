@@ -28,7 +28,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates//')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['8000-dlynch95-portfolioproje-n6ccfcwpcgq.ws-us104.gitpod.io', 'happy-travels-appt-booking-469f488c0638.herokuapp.com']
 
 # Application definition
@@ -60,9 +60,6 @@ LOGOUT_REDIRECT_URL = '/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
-
-USE_TZ = True
-TIME_ZONE = "Dublin"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

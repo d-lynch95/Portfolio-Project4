@@ -8,7 +8,7 @@ from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
 from django.forms.widgets import HiddenInput
 
-
+# Create from to accept users appointments
 class ApptForm(forms.ModelForm):
     class Meta:
         model = Post
@@ -17,6 +17,7 @@ class ApptForm(forms.ModelForm):
             'slug': HiddenInput(),
         }
 
+    # This code prevents double bookings or bookings in the past
     def clean(self):
         cleaned_data = super().clean()
         date = cleaned_data.get('date')
@@ -31,6 +32,7 @@ class ApptForm(forms.ModelForm):
                 )
         return cleaned_data
 
+    # Allow users to submit thr form and use datepicker
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.helper = FormHelper()
