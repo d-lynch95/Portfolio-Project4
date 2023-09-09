@@ -46,22 +46,6 @@ class MakeApptView(LoginRequiredMixin, generic.CreateView):
         hide.widget = hide.hidden_widget()
         return render(request, 'form.html', context)
 
-
-    # This code prevents double bookings or bookings in the past
-    def clean(self):
-        cleaned_data = super().clean()
-        date = cleaned_data.get('date')
-        time = cleaned_data.get('time')
-        if date < date.today():
-            raise forms.ValidationError(
-                    "This date cannot be selected as it has already passed"
-                )
-        if Post.objects.filter(Q(date=date) & Q(time=time)).exists():
-            raise forms.ValidationError(
-                "This appointment time is not available. Please select another"
-                )
-        return cleaned_data
-
     def post(self, request):
         form = ApptForm(request.POST)
         if form.is_valid():

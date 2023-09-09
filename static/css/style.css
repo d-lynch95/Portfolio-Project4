@@ -72,7 +72,7 @@ iframe {
 
 /* code for mobile first design */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 989px) {
 
 .indeximage {
     width: 90vw;
@@ -105,20 +105,6 @@ iframe {
 .contactdiv{
     display:flex;
     flex-direction: column;
-}
-}
-
-
-/* code for tablets */
-@media only screen and (min-width: 889px) {
-
-.contactdiv{
-    display:flex;
-    flex-direction: column;
-}
-
-iframe {
-    margin-left: 10vw;
 }
 }
 
