@@ -73,6 +73,15 @@ class EditApptView(LoginRequiredMixin, generic.UpdateView):
         form = self.form_class(instance=post)
         return render(request, "editform.html", {"form": form})
 
+    def post(self, request, slug, *args, **kwargs):
+        queryset = Post.objects
+        post = get_object_or_404(queryset, slug=slug)
+        form = self.form_class(request.POST, instance=post)
+        if form.is_valid():
+            form.save()
+            return redirect('/posts/')
+        return render(request, "editform.html", {"form": form})
+
 
 class DeleteAppt(LoginRequiredMixin, DeleteView):
     model = Post
