@@ -7,7 +7,7 @@ HappyTravels appointment booking service is a web based booking application to a
 [Live Website](https://happy-travels-appt-booking-469f488c0638.herokuapp.com/)
 
 <!-- Add responsive mockup -->
-![AmiResponsive Mockup]()
+![AmiResponsive Mockup](static/media/responsive.png)
 
 ## User Goals and Stories
 
