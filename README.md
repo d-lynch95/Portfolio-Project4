@@ -97,6 +97,11 @@ I used the Montserrat and Poppins fonts from GoogleFonts. I opted for these font
   ![Manage appointments](static/media/wireframes/manage%20appointments.png)
 </details>
 
+### Entity relationship diagram
+
+This diagram shows how the users and staff users interact with the database.
+
+![Entity relationship Diagram](static/media/ERD.png)
 
 ## Development
 
@@ -342,8 +347,6 @@ I did not test this site on a tablet but did utilise the google chrome Dev tools
 
 
   </details>
-
-
 
 
 ### Manual Testing
