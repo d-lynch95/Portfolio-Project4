@@ -69,36 +69,6 @@ class EditApptView(LoginRequiredMixin, generic.UpdateView):
     template_name = 'editform.html'
     success_url = '/posts/'
 
-    # def form_valid(self, form):
-    #     name = form.cleaned_data['name']
-    #     phone = form.cleaned_data['phone']
-    #     email = form.cleaned_data['email']
-    #     date = form.cleaned_data['date']
-    #     time = form.cleaned_data['time']
-    #     slug = form.cleaned_data['slug']
-    #     messages.success(
-    #         self.request,
-    #         f'Your appointment has been changed'
-    #     )
-    #     return super(EditApptView, self).form_valid(form)
-
-
-# def edit_form(request, slug):
-#     post = get_object_or_404(Post, slug=slug)
-
-#     if request.method == "POST":
-#         form = EditApptForm(request.POST, instance=post)
-#         if form.is_valid():
-
-#             form.save()
-#             print(form)
-#             return redirect("PostList")
-#         else:
-#             print(form.errors)
-    
-#     form = EditApptForm(instance=post)
-#     return render(request, "editform.html", {"form": form})
-
 
 # Allow users to delete their appointments
 class DeleteAppt(LoginRequiredMixin, DeleteView):
